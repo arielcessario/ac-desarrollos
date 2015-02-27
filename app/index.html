@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html scrollff lang="en" ng-app="ac" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html scrollff lang="en" ng-app="ac" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html scrollff lang="en" ng-app="ac" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html scrollff lang="en" ng-app="ac" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="stylesheets/screen.css">
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+</head>
+<body scroll ng-controller="MainController as mainCtrl" is-scrolled="{{mainCtrl.isScrolled}}">
+
+
+<!--<div class="logo" ng-class="{'logo-mini':mini, 'logo-mid':mid}" ></div>-->
+<div class="main"></div>
+<div id="top-bar">
+    <div class="top-bar-spacer"></div>
+    <div class="logo-container" ng-class="{'logo-container-mini':moved}">
+        <div id="logo-rueda"></div>
+        <div id="logo-texto"></div>
+
+        <!--<div class="logo" ng-click="mainCtrl.entrar()" ng-class="{'logo-mini':moved}"><img src="img/logo.png" alt=""/>-->
+
+        <!--</div>-->
+    </div>
+
+    <div class="top-bar-spacer"></div>
+</div>
+
+<!--<div class="content"><span>isScrolled {{mini}}</span></div>-->
+
+<!--&lt;!&ndash;[if lt IE 7]>-->
+<!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
+<!--<![endif]&ndash;&gt;-->
+<!--<div class="header-fix"></div>-->
+<div class="view-container" id="container">
+    <div class="view-container" id="output">
+        <div id="view" class="view" ng-view>
+
+        </div>
+    </div>
+
+</div>
+<script src="ext/fss-main.js"></script>
+
+
+<!--<div>Angular seed app: v<span app-version></span></div>-->
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<!--<script src="ext/scroll.js"></script>-->
+<script src="app.js"></script>
+<script src="mainView/mainView.js"></script>
+<script src="view2/view2.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+
+
+
+
+</body>
+</html>

@@ -6,17 +6,7 @@
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
 
-//.main {
-//  position: fixed;
-//  width: 800px;
-//  height: 1900px;
-//  box-shadow: 0px 0px 10px 0px black;
-//  z-index: 0;
-//  margin-left: -400px;
-//  left: 50%;
-//  top: 40px;
-//  background-color: #EC407A;
-//}
+
 
 h1 {
   margin: 0;
@@ -26,28 +16,99 @@ body {
   background-color: #FFF3E0;
 }
 
-@-webkit-keyframes rueda-move {
+@-webkit-keyframes logo-rueda-move {
   0% {
-    opacity: 0;
-    height: 100px
+    height: 300px;
+    width: 300px;
+    margin-left: -1000px;
+    margin-top: 100px;
+
+
   }
+
+  50% {
+  }
+
+
+  66%{
+    height: 300px;
+    width: 300px;
+    top:0;
+    -webkit-transform: rotate(360deg);
+//    left: calc(50% - 200px);
+    margin-left: 0px;
+    margin-top: 100px;
+  }
+
   100% {
+    -webkit-transform: rotate(360deg)
+  }
+
+}
+
+@-webkit-keyframes logo-texto-fade {
+  0% {
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    top: -300px;
+    left: 300px;
+    opacity: 0;
+
+
+
+  }
+
+  33% {
+  }
+
+  66%{
     opacity: 1;
-    height: 1px
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    left: 300px;
+    top: -300px;
+  }
+
+  100% {
+    height: 80px;
   }
 }
 
-@-webkit-keyframes texto-fade {
+@-webkit-keyframes logo-container-anim {
   0% {
+
+    height: 640px;
+    position: fixed;
+    width: 980px;
+    top: 0px;
+    left: calc(50% - 490px);
     opacity: 0;
   }
-  100% {
+
+  10% {
     opacity: 1;
+  }
+
+  80% {
+    height: 640px;
+
+  }
+  100% {
+    height: 100px;
   }
 }
 
 @media (min-width: 980px) {
   #top-bar {
+    transform: translate3d(0, 0, 0);
+    -moz-transform:  translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+
+
+
     position: fixed;
     top: 0;
     height: 100px;
@@ -102,7 +163,7 @@ body {
   }
 
   .logo-container {
-
+    -webkit-animation: logo-container-anim 3s;
     width: 980px;
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
@@ -120,24 +181,26 @@ body {
     background-color: #ff7d00;
     display: inline;
     #logo-rueda {
+
+      -webkit-animation: logo-rueda-move 3s;
       width: 90px;
-      img {
-        margin-top: 10px;
-        height: 80px;
-        width: auto;
-      }
+      background: url(../img/logo%20final.png) center center no-repeat;
+      background-size: contain;
+      height: 80px;
+      margin-top: 10px;
+
 
     }
     #logo-texto {
+      -webkit-animation: logo-texto-fade 3s;
       width: 120px;
       position: relative;
       top: -90px;
       left: 90px;
-      img {
-        margin-top:10px;
-        height: 80px;
-        width: auto;
-      }
+      background: url(../img/logo%20letras.svg) center center no-repeat;
+      background-size: contain;
+      height: 80px;
+      margin-top: 10px;
     }
   }
 
@@ -284,7 +347,7 @@ body {
     width: 100%;
     height: 2800px;
     position: absolute;
-    top: 600px;
+    top: 100px;
     //    left: 50%;
     //    margin-left: -490px;
     //  background-color: #EC407A;
@@ -301,7 +364,7 @@ body {
     width: 980px;
     height: 2800px;
     position: absolute;
-    top: 600px;
+    top: 100px;
     left: 50%;
     margin-left: -490px;
     //  background-color: #EC407A;
@@ -329,9 +392,7 @@ body {
   height: 540px;
 }
 
-.content-moved {
-  top: 0px;
-}
+
 
 /* Portfolio */
 
@@ -480,84 +541,13 @@ body {
   height: 25px;
 }
 
-//.portfolio-inner::-webkit-scrollbar {
-//  width: 1px;
-//  height: 1px;
-//  -webkit-transition: height 1s;
-//  -moz-transition: height 1s;
-//  -ms-transition: height 1s;
-//  -o-transition: height 1s;
-//  transition: height 1s;
-//}
-//
-//.portfolio-inner:hover::-webkit-scrollbar {
-//  width: 10px;
-//  height: 10px;
-//
-//}
-//
-//.portfolio-inner::-webkit-scrollbar-track {
-//  background-color: rgba(0, 0, 0, 0.0);
-//}
-//
-//.portfolio-inner::-webkit-scrollbar-track:hover {
-//  height: 15px;
-//  width: 15px;
-//  background-color: rgba(0, 0, 0, 0.05);
-//}
-//
-//.portfolio-inner::-webkit-scrollbar-thumb {
-//  background-color: rgba(0, 175, 219, 0.4);
-//}
-//
-//.portfolio-inner::-webkit-scrollbar-thumb:hover {
-//  height: 15px;
-//  width: 15px;
-//  background-color: rgba(0, 175, 219, 0.7);
-//}
-
-/* End Portfolio */
-
-//.view.ng-enter, .view.ng-leave {
-//  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-//  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
-//
-//  display: block;
-//  width: 100%;
-//  border-left: 1px solid black;
-//
-//  position: absolute;
-//  top: 0;
-//  left: 0;
-//  right: 0;
-//  bottom: 0;
-//  padding: 10px;
-//}
-//
 .view-container {
   position: relative;
   height: 2800px !important;
-  //  background-color: #FF4D26;
-  //  background-color: #FFF3E0;
-  //  background: #ff7d00 url("../img/back.png") center center no-repeat;
-  //  border: 1px solid black;
-  //  height:40px;
   overflow: hidden;
 
 }
 
-//
-//.view.ng-enter {
-//  left: 100%;
-//}
-//
-//.view.ng-enter.ng-enter-active {
-//  left: 0;
-//}
-//
-//.view.ng-leave.ng-leave-active {
-//  left: -100%;
-//}
 
 /* EMPRESA */
 
@@ -687,17 +677,13 @@ body {
 
 .shadow {
   position: absolute;
-  top: 0px;
+  top: 40px;
   left: 0;
   right: 0;
   bottom: 50px;
   pointer-events: none;
   @include box-shadow(rgba(50, 50, 50, 0.4) 0 0 25px, rgba(black, 0.8) 0 0 15px 1px inset);
   z-index: 4;
-}
-
-.shadow-open {
-  top: 100px;
 }
 
 .separator {

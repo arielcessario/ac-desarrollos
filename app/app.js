@@ -18,15 +18,20 @@ angular.module('ac', [
     .controller('MainController', MainController);
 
 
-MainController.$inject = ['$scope'];
-function MainController($scope) {
+MainController.$inject = ['$scope', '$location'];
+function MainController($scope, $location) {
     var vm = this;
     //vm.isScrolled = false;
     vm.entrar = entrar;
     vm.moved = false;
+    vm.goToAnchor = goToAnchor;
 
     function entrar() {
         $scope.moved = !$scope.moved;
+    }
+
+    function goToAnchor(id) {
+        $location.hash(id);
     }
 
     //console.log($scope.isScrolled);

@@ -12,14 +12,16 @@
         }])
         .controller('MainViewCtrl', MainViewCtrl);
 
-    MainViewCtrl.$inject = ['$http'];
+    MainViewCtrl.$inject = ['$http', '$location'];
 
-    function MainViewCtrl($http) {
+    function MainViewCtrl($http, $location) {
 
         var vm = this;
 
         vm.swipeLeft = swipeLeft;
         vm.sendMail = sendMail;
+
+
         //vm.move = move;
         //
         //function move(event){

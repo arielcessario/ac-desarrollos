@@ -1,0 +1,219 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+@-webkit-keyframes header-rueda {
+  0% {
+    opacity: 1;
+    z-index: 100000;
+    transform: scale(3, 3);
+  }
+  66% {
+    position: absolute;
+    -webkit-transform: rotate(360deg);
+    opacity: 1;
+    background: url(../img/rueda.png) center center no-repeat;
+    width: 300px;
+    height: 300px;
+    background-size: 300px 300px;
+    top: 200px;
+    left: calc(50% - 300px);
+    z-index: 100000;
+  }
+  66.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes header-texto {}
+@-webkit-keyframes header-container {}
+@-webkit-keyframes header-full {}
+/* line 64, ../sass/header.scss */
+#top-bar {
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 5;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+/* line 106, ../sass/header.scss */
+#logo-rueda {
+  background: blue url(../img/rueda.png) center center no-repeat;
+  -webkit-animation: header-rueda 3s;
+  width: 80px;
+  height: 80px;
+  background-size: 80px 80px;
+  position: absolute;
+  top: 10px;
+  left: 15%;
+  z-index: 0;
+  opacity: 0;
+}
+
+/* line 122, ../sass/header.scss */
+#logo-texto-full {
+  max-width: 300px;
+  position: absolute;
+  top: 10px;
+  left: calc(10% + 65px);
+  background: pink url(../img/logofull.png) center center no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 185px;
+}
+
+/* line 134, ../sass/header.scss */
+#logo-texto {
+  max-width: 300px;
+  position: absolute;
+  top: 10px;
+  left: calc(10% + 65px);
+  background: pink url(../img/letras.png) center center no-repeat;
+  background-size: contain;
+  height: 80px;
+  width: 80px;
+  z-index: -1;
+}
+
+/* line 147, ../sass/header.scss */
+.logo-container {
+  -webkit-animation: logo-container-anim 3s;
+  width: 980px;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  background-color: #ff7d00;
+  display: inline;
+}
+
+@media (max-width: 979px) {
+  /* line 164, ../sass/header.scss */
+  .top-bar-spacer {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+@media (min-width: 980px) {
+  /* line 182, ../sass/header.scss */
+  .top-bar-spacer {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+}
+@-webkit-keyframes logo-texto-fade {
+  0% {
+    background: url(../img/letras.svg) center center no-repeat;
+    height: 300px;
+    max-width: 300px;
+    background-size: contain;
+    top: 200px;
+    left: 50%;
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+    top: 200px;
+    background: url(../img/letras.svg) center center no-repeat;
+    height: 300px;
+    max-width: 300px;
+    left: 50%;
+    background-size: contain;
+  }
+  66.1% {
+    background: url(../img/logofull.png) center center no-repeat;
+    top: 237px;
+    height: 226px;
+    max-width: 800px;
+    left: calc(50% - 368px);
+    background-size: contain;
+  }
+  90% {
+    top: 10px;
+    left: calc(50% - 150px);
+  }
+  100% {
+    background-size: contain;
+  }
+}
+@-webkit-keyframes logo-container-anim {
+  0% {
+    height: 640px;
+    position: fixed;
+    width: 980px;
+    top: 0px;
+    left: calc(50% - 490px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    height: 640px;
+  }
+  100% {
+    height: 100px;
+  }
+}

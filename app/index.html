@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
     <link rel="stylesheet" href="stylesheets/screen.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
     <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 
 
@@ -28,8 +29,16 @@
 <div id="top-bar">
     <div class="top-bar-spacer"></div>
     <div class="logo-container">
+        <div id="logo-texto-full"></div>
         <div id="logo-rueda"></div>
         <div id="logo-texto"></div>
+
+
+        <div id="nav-bar">
+            <div class="link" ng-click="mainCtrl.goToAnchor('empresa');"><a href="">Empresa</a></div>
+            <div class="link" ng-click="mainCtrl.goToAnchor('portfolio');"><a href="">Portolio</a></div>
+            <div class="link" ng-click="mainCtrl.goToAnchor('contacto');"><a href="">Contacto</a></div>
+        </div>
 
         <!--<div class="logo" ng-click="mainCtrl.entrar()" ng-class="{'logo-mini':moved}"><img src="img/logo.png" alt=""/>-->
 
@@ -38,6 +47,7 @@
 
     <div class="top-bar-spacer"></div>
 </div>
+
 
 <!--<div class="content"><span>isScrolled {{mini}}</span></div>-->
 

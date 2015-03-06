@@ -80,51 +80,51 @@ body {
 
 @-webkit-keyframes main-up {
   0% {
-    top: 640px;
+    top: 590px;
   }
-  67% {
-    top: 640px;
+  60% {
+    top: 590px;
   }
   100% {
-    top: 100px;
+    top: 60px;
   }
 }
 @media (max-width: 979px) {
-  /* line 35, ../sass/screen.scss */
+  /* line 33, ../sass/screen.scss */
   .content {
     -webkit-animation: main-up 3s;
     width: 100%;
-    height: 2800px;
+    height: 2540px;
     position: absolute;
-    top: 100px;
+    top: 60px;
     transition: top 2s;
   }
 }
 @media (min-width: 980px) {
-  /* line 53, ../sass/screen.scss */
+  /* line 51, ../sass/screen.scss */
   .content {
     -webkit-animation: main-up 3s;
     width: 980px;
-    height: 2800px;
+    height: 2540px;
     position: absolute;
-    top: 100px;
+    top: 60px;
     left: 50%;
     margin-left: -490px;
     transition: top 2s;
   }
 }
-/* line 70, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .inicio {
   width: 100%;
   height: 40px;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .inicio-open {
   height: 100px !important;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .empresa {
   background-color: red;
   width: 100%;
@@ -132,15 +132,15 @@ body {
 }
 
 /* Portfolio */
-/* line 88, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .portfolio {
   background-size: 100%;
   background: #ff7d00 url("../img/fondodentado.png") center center no-repeat;
-  height: 540px;
+  height: 500px;
 }
 
 @media (max-width: 979px) {
-  /* line 95, ../sass/screen.scss */
+  /* line 93, ../sass/screen.scss */
   .portfolio-inner {
     width: 100%;
     height: 400px;
@@ -148,36 +148,36 @@ body {
     overflow-x: scroll;
   }
 
-  /* line 104, ../sass/screen.scss */
+  /* line 102, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar {
     height: 10px;
     transition: all 1s;
   }
 
-  /* line 110, ../sass/screen.scss */
+  /* line 108, ../sass/screen.scss */
   .portfolio-inner:hover::-webkit-scrollbar {
     transform: scale(10, 10);
     height: 8px;
   }
 
-  /* line 115, ../sass/screen.scss */
+  /* line 113, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar-thumb {
     background-color: #c4c4c4;
     border-radius: 0;
   }
 
-  /* line 120, ../sass/screen.scss */
+  /* line 118, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar-thumb:hover {
     background-color: #c4c4c4;
   }
 
-  /* line 124, ../sass/screen.scss */
+  /* line 122, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar-track {
     background-color: #ededed;
   }
 }
 @media (min-width: 980px) {
-  /* line 131, ../sass/screen.scss */
+  /* line 129, ../sass/screen.scss */
   .portfolio-inner {
     width: 980px;
     height: 400px;
@@ -185,35 +185,35 @@ body {
     overflow-x: scroll;
   }
 
-  /* line 138, ../sass/screen.scss */
+  /* line 136, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar {
     height: 1px;
     transition: all 1s;
   }
 
-  /* line 143, ../sass/screen.scss */
+  /* line 141, ../sass/screen.scss */
   .portfolio-inner:hover::-webkit-scrollbar {
     transform: scale(10, 10);
     height: 8px;
   }
 
-  /* line 148, ../sass/screen.scss */
+  /* line 146, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar-thumb {
     background-color: #c4c4c4;
     border-radius: 0;
   }
 
-  /* line 153, ../sass/screen.scss */
+  /* line 151, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar-thumb:hover {
     background-color: #c4c4c4;
   }
 
-  /* line 157, ../sass/screen.scss */
+  /* line 155, ../sass/screen.scss */
   .portfolio-inner::-webkit-scrollbar-track {
     background-color: #ededed;
   }
 }
-/* line 163, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .portfolio-title {
   font-family: Roboto;
   font-weight: 100;
@@ -224,7 +224,7 @@ body {
   font-size: 2.1em;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 .portfolio-subtitle {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2QwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdkMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -239,7 +239,7 @@ body {
   height: 20px;
 }
 
-/* line 184, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .portfolio-details {
   width: 2000px;
   height: 400px;
@@ -254,31 +254,28 @@ body {
   left: 0px;
 }
 
-/* line 193, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .portfolio-work {
   width: 280px;
-  background-color: rgba(68, 68, 68, 0.7);
+  background-color: #444444;
   height: 300px;
-  position: relative;
-  top: 25px;
+  margin-top: 25px;
   margin-left: 40px;
   display: inline-block;
   transition: all 1s;
 }
 
-/* line 207, ../sass/screen.scss */
+/* line 204, ../sass/screen.scss */
 .portfolio-work-expanded {
   position: fixed;
-  width: 1000px;
+  top: calc(50% - 300px);
+  left: calc(50% - 490px);
   height: 600px;
-  z-index: 15;
-  left: 50%;
-  margin-left: -500px;
-  top: 50%;
-  margin-top: -300px;
+  width: 980px;
+  z-index: 14;
 }
 
-/* line 224, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .portfolio-footer {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2QwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdkMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -293,30 +290,46 @@ body {
   height: 25px;
 }
 
-/* line 233, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .view-container {
   position: relative;
-  height: 2800px !important;
+  height: 2540px !important;
   overflow: hidden;
+}
+
+/* line 230, ../sass/screen.scss */
+#portfolio-background {
+  opacity: 0;
+  transition: all 1s;
+}
+
+/* line 235, ../sass/screen.scss */
+.portfolio-background-show {
+  opacity: 1 !important;
 }
 
 /* EMPRESA */
 /* Portfolio */
-/* line 244, ../sass/screen.scss */
-.empresa,
-.contacto {
+/* line 243, ../sass/screen.scss */
+.empresa {
   background-size: 100%;
   background: #ff7d00 url("../img/fondodentado.png") center center no-repeat;
   height: 540px;
 }
 
-/* line 251, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
+.contacto {
+  background-size: 100%;
+  height: 500px;
+}
+
+/* line 255, ../sass/screen.scss */
 .contacto-inner {
   width: 980px;
   height: 400px;
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .empresa-title,
 .contacto-title {
   font-family: Roboto;
@@ -328,7 +341,93 @@ body {
   font-size: 2.1em;
 }
 
-/* line 269, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
+.contacto-top {
+  background-color: #000000;
+  width: 100%;
+  height: 350px;
+  font-family: "Roboto", sans-serif;
+}
+/* line 288, ../sass/screen.scss */
+.contacto-top .contacto-top-titulo {
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: 300;
+  margin-left: 10px;
+}
+/* line 294, ../sass/screen.scss */
+.contacto-top .contacto-top-subtitulo {
+  font-size: 20px;
+  color: #00c7ff;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+/* line 302, ../sass/screen.scss */
+.contacto-bottom {
+  background-color: #ff7d00;
+  width: 100%;
+  height: 150px;
+}
+/* line 306, ../sass/screen.scss */
+.contacto-bottom div {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+/* line 314, ../sass/screen.scss */
+.contacto-bottom div p {
+  margin-top: 5px;
+  font-weight: 700;
+  font-size: 20px;
+}
+/* line 318, ../sass/screen.scss */
+.contacto-bottom div p span {
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* line 327, ../sass/screen.scss */
+.contacto-form {
+  position: relative;
+  bottom: 0px;
+  left: calc(50% - 250px);
+  width: 600px;
+}
+/* line 332, ../sass/screen.scss */
+.contacto-form .contacto-enviar {
+  background: #00c7ff !important;
+  color: #ffffff;
+  border: 0px solid;
+  margin-left: 445px;
+  width: 60px;
+}
+/* line 341, ../sass/screen.scss */
+.contacto-form .contacto-wrapper input, .contacto-form .contacto-wrapper textarea {
+  margin-bottom: 10px;
+  width: 500px;
+}
+/* line 345, ../sass/screen.scss */
+.contacto-form .contacto-wrapper img {
+  height: 20px;
+  position: relative;
+  top: 4px;
+  left: -50px;
+}
+
+/* line 354, ../sass/screen.scss */
+.footer-logo {
+  margin-top: 30px;
+  margin-left: 0;
+  width: 150px;
+}
+
+/* line 362, ../sass/screen.scss */
 .empresa-subtitle,
 .contacto-subtitle {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2QwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdkMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -345,7 +444,7 @@ body {
 }
 
 @media (max-width: 979px) {
-  /* line 280, ../sass/screen.scss */
+  /* line 373, ../sass/screen.scss */
   .empresa-inner {
     width: 100%;
     height: 400px;
@@ -354,13 +453,13 @@ body {
   }
 }
 @media (min-width: 980px) {
-  /* line 289, ../sass/screen.scss */
+  /* line 382, ../sass/screen.scss */
   .empresa-inner {
     width: 980px;
     height: 400px;
   }
 }
-/* line 296, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .empresa-details {
   width: 980px;
   height: 400px;
@@ -375,9 +474,11 @@ body {
   left: 0px;
 }
 
-/* line 305, ../sass/screen.scss */
+/* line 398, ../sass/screen.scss */
 .empresa-person {
   width: 200px;
+  max-width: 200px;
+  overflow: hidden;
   background-color: #444444;
   height: 300px;
   position: absolute;
@@ -385,12 +486,36 @@ body {
   margin-left: 35px;
   display: inline-block;
   transition: transform 1s;
-  -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
 }
 
-/* line 319, ../sass/screen.scss */
+/* line 414, ../sass/screen.scss */
+.empresa-caja {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 300px !important;
+  width: 400px !important;
+  transition: all 1s;
+}
+
+/* line 428, ../sass/screen.scss */
+#empresa-textodiseno tspan, #empresa-textodiseno text,
+#empresa-diegoYankelevich tspan,
+#empresa-diegoYankelevich text,
+#ampliar tspan,
+#ampliar text,
+#empresa-textosmouseover tspan,
+#empresa-textosmouseover text {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+/* line 434, ../sass/screen.scss */
+.empresa-caja:hover {
+  left: -200px;
+}
+
+/* line 439, ../sass/screen.scss */
 .empresa-name {
   position: absolute;
   bottom: 5px;
@@ -399,14 +524,14 @@ body {
   text-align: right;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 447, ../sass/screen.scss */
 .empresa-first {
   font-family: Roboto, serif;
   display: inline-block;
   color: #ffffff;
 }
 
-/* line 333, ../sass/screen.scss */
+/* line 453, ../sass/screen.scss */
 .empresa-last {
   font-family: Roboto, serif;
   font-weight: 700;
@@ -414,7 +539,7 @@ body {
   color: #ff7d00;
 }
 
-/* line 340, ../sass/screen.scss */
+/* line 460, ../sass/screen.scss */
 .empresa-job-title {
   font-family: Roboto, serif;
   font-weight: 700;
@@ -425,12 +550,7 @@ body {
   text-shadow: 2px 2px #000000;
 }
 
-/* line 350, ../sass/screen.scss */
-.empresa-person:hover {
-  transform: scale(1.1, 1.1);
-}
-
-/* line 354, ../sass/screen.scss */
+/* line 474, ../sass/screen.scss */
 .empresa-footer,
 .contacto-footer {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2QwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdkMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -447,22 +567,83 @@ body {
 }
 
 /* EMPRESA END*/
-/* line 366, ../sass/screen.scss */
+/* line 486, ../sass/screen.scss */
 .shadow {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  bottom: 50px;
-  pointer-events: none;
-  -moz-box-shadow: rgba(50, 50, 50, 0.4) 0 0 25px, rgba(0, 0, 0, 0.8) 0 0 15px 1px inset;
-  -webkit-box-shadow: rgba(50, 50, 50, 0.4) 0 0 25px, rgba(0, 0, 0, 0.8) 0 0 15px 1px inset;
-  box-shadow: rgba(50, 50, 50, 0.4) 0 0 25px, rgba(0, 0, 0, 0.8) 0 0 15px 1px inset;
-  background-size: contain;
-  z-index: 4;
+  background: rgba(0, 0, 255, 0.8);
+  -moz-box-shadow: rgba(50, 50, 50, 0.3) 1px 1px 1px, rgba(0, 0, 0, 0.3) 1px 1px 1px 1px;
+  -webkit-box-shadow: rgba(50, 50, 50, 0.3) 1px 1px 1px, rgba(0, 0, 0, 0.3) 1px 1px 1px 1px;
+  box-shadow: rgba(50, 50, 50, 0.3) 1px 1px 1px, rgba(0, 0, 0, 0.3) 1px 1px 1px 1px;
 }
 
-/* line 394, ../sass/screen.scss */
+/* line 518, ../sass/screen.scss */
+#portfolio-thumb {
+  opacity: 1;
+  transition: all 1s;
+}
+
+/* line 523, ../sass/screen.scss */
+.portfolio-img-over {
+  position: absolute !important;
+  transform: scale(10, 10) !important;
+  transform-origin: 0% 0% !important;
+  opacity: 0 !important;
+}
+
+/* line 532, ../sass/screen.scss */
+#barra_naranja_1_,
+#ampliar,
+#triangulo_negro_1_ {
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(0px, -200px);
+}
+
+/* line 540, ../sass/screen.scss */
+.barra_naranja_1_-hover,
+.ampliar-hover {
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+}
+
+/* line 547, ../sass/screen.scss */
+#texto_detalles tspan {
+  font-family: Roboto, serif !important;
+  font-weight: 300 !important;
+}
+
+/* line 555, ../sass/screen.scss */
+#titulo_prensa_energetica_1_,
+#texto_detalles_1_,
+#triangulo_naranja,
+#linea_naranka {
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(-200px, 0px);
+}
+/* line 564, ../sass/screen.scss */
+#titulo_prensa_energetica_1_ text tspan:nth-child(1),
+#texto_detalles_1_ text tspan:nth-child(1),
+#triangulo_naranja text tspan:nth-child(1),
+#linea_naranka text tspan:nth-child(1) {
+  font-family: Roboto, serif !important;
+  font-weight: 300;
+}
+/* line 569, ../sass/screen.scss */
+#titulo_prensa_energetica_1_ text tspan:nth-child(2),
+#texto_detalles_1_ text tspan:nth-child(2),
+#triangulo_naranja text tspan:nth-child(2),
+#linea_naranka text tspan:nth-child(2) {
+  font-family: Roboto, serif !important;
+  font-weight: 700;
+}
+
+/* line 577, ../sass/screen.scss */
+.portfolio-work-over {
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+}
+
+/* line 582, ../sass/screen.scss */
 .flex-container-contacto {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmN2QwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjdkMDAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -473,7 +654,7 @@ body {
   position: relative;
   top: 50px;
   left: 0px;
-  height: 300px;
+  height: 350px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -504,7 +685,7 @@ body {
   align-items: flex-start;
 }
 
-/* line 431, ../sass/screen.scss */
+/* line 619, ../sass/screen.scss */
 .flex-item-contacto:nth-child(1) {
   -webkit-box-ordinal-group: 1;
   -moz-box-ordinal-group: 1;
@@ -521,7 +702,7 @@ body {
   align-self: stretch;
 }
 
-/* line 447, ../sass/screen.scss */
+/* line 635, ../sass/screen.scss */
 .flex-item-contacto:nth-child(2) {
   max-width: 490px;
   -webkit-box-ordinal-group: 1;
@@ -538,15 +719,15 @@ body {
   -ms-flex-item-align: stretch;
   align-self: stretch;
 }
-/* line 462, ../sass/screen.scss */
+/* line 650, ../sass/screen.scss */
 .flex-item-contacto:nth-child(2) form {
   max-width: 200px;
 }
-/* line 465, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 .flex-item-contacto:nth-child(2) form div {
   white-space: nowrap;
 }
-/* line 469, ../sass/screen.scss */
+/* line 657, ../sass/screen.scss */
 .flex-item-contacto:nth-child(2) form input, .flex-item-contacto:nth-child(2) form textarea {
   width: 400px;
   margin: 10px;
@@ -554,42 +735,34 @@ body {
   box-shadow: 1px 1px 1px gray;
 }
 
-/* line 481, ../sass/screen.scss */
-.contacto-wrapper img {
-  height: 20px;
-  position: relative;
-  top: 4px;
-  left: -40px;
-}
-
 /*
     Legacy Firefox implementation treats all flex containers
     as inline-block elements.
 */
 @-moz-document url-prefix() {
-  /* line 495, ../sass/screen.scss */
+  /* line 674, ../sass/screen.scss */
   .flex-container-contacto {
     width: 100%;
     -moz-box-sizing: border-box;
   }
 }
 @media (max-width: 979px) {
-  /* line 503, ../sass/screen.scss */
+  /* line 682, ../sass/screen.scss */
   .separador {
     width: 100%;
-    background: #ff7d00 url("../img/separador.png") center center no-repeat;
+    background-color: #444444;
     background-size: contain;
     height: 300px !important;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
   }
-  /* line 515, ../sass/screen.scss */
+  /* line 694, ../sass/screen.scss */
   .separador h1 {
     text-align: center;
     font-weight: 100;
     font-size: 41px;
   }
-  /* line 521, ../sass/screen.scss */
+  /* line 700, ../sass/screen.scss */
   .separador h2 {
     font-weight: 400;
     font-size: 42px;
@@ -597,29 +770,29 @@ body {
   }
 }
 @media (min-width: 980px) {
-  /* line 531, ../sass/screen.scss */
+  /* line 710, ../sass/screen.scss */
   .separador {
     width: 980px;
-    background: #ff7d00 url("../img/separador.png") center center no-repeat;
+    background-color: #444444;
     background-size: contain;
     height: 300px !important;
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
   }
-  /* line 542, ../sass/screen.scss */
+  /* line 721, ../sass/screen.scss */
   .separador h1 {
     text-align: center;
     font-weight: 100;
     font-size: 41px;
   }
-  /* line 548, ../sass/screen.scss */
+  /* line 727, ../sass/screen.scss */
   .separador h2 {
     font-weight: 400;
     font-size: 42px;
     text-align: center;
   }
 }
-/* line 557, ../sass/screen.scss */
+/* line 736, ../sass/screen.scss */
 .screen-shadow {
   position: fixed;
   top: 0;
@@ -630,7 +803,7 @@ body {
   z-index: 14;
 }
 
-/* line 567, ../sass/screen.scss */
+/* line 746, ../sass/screen.scss */
 .btn-close {
   font-size: 2em;
   color: white;
@@ -640,7 +813,7 @@ body {
   z-index: 16;
 }
 
-/* line 577, ../sass/screen.scss */
+/* line 756, ../sass/screen.scss */
 .btn-hidden {
   font-size: 0px;
   transition: all 1s;
@@ -657,7 +830,7 @@ body {
     opacity: 1;
   }
 }
-/* line 597, ../sass/screen.scss */
+/* line 775, ../sass/screen.scss */
 #nav-bar {
   -webkit-animation: menu-fade 4s;
   float: right;
@@ -666,11 +839,11 @@ body {
   text-align: right;
   margin-right: 10px;
 }
-/* line 604, ../sass/screen.scss */
+/* line 782, ../sass/screen.scss */
 #nav-bar .link {
   display: inline;
 }
-/* line 607, ../sass/screen.scss */
+/* line 785, ../sass/screen.scss */
 #nav-bar .link a {
   margin-left: 30px;
   text-decoration: none;

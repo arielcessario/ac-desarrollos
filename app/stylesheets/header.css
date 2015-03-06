@@ -3,23 +3,82 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
 @-webkit-keyframes header-rueda {
   0% {
     opacity: 1;
     z-index: 100000;
-    transform: scale(3, 3);
+    -webkit-transform: translate(-500px, 300px) scale(3, 3) rotate(-180deg);
   }
   66% {
-    position: absolute;
-    -webkit-transform: rotate(360deg);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-170px, 300px) scale(3, 3) rotate(360deg);
     opacity: 1;
-    background: url(../img/rueda.png) center center no-repeat;
-    width: 300px;
-    height: 300px;
-    background-size: 300px 300px;
-    top: 200px;
-    left: calc(50% - 300px);
-    z-index: 100000;
   }
   66.1% {
     opacity: 0;
@@ -28,10 +87,71 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes header-texto {}
-@-webkit-keyframes header-container {}
-@-webkit-keyframes header-full {}
-/* line 64, ../sass/header.scss */
+@-webkit-keyframes header-texto {
+  0% {
+    opacity: 0;
+    z-index: 100000;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(90px, 300px) scale(3, 3);
+  }
+  66% {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(90px, 300px) scale(3, 3);
+    opacity: 1;
+  }
+  66.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes header-container {
+  0% {
+    height: 640px;
+    position: absolute;
+    width: 980px;
+    top: 0px;
+    left: calc(50% - 490px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    height: 640px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+@-webkit-keyframes header-full {
+  0% {
+    opacity: 0;
+    top: 50%;
+    left: calc(50% - 155px);
+    -webkit-transform: translate(90px, 300px) scale(3, 3);
+  }
+  66% {
+    opacity: 0;
+  }
+  66.1% {
+    top: 50%;
+    left: calc(50% - 155px);
+    opacity: 1;
+    -webkit-transform: translate(90px, 300px) scale(3, 3);
+  }
+  90% {
+    left: calc(50% - 155px);
+    -webkit-transform: translate(90px, 10px) scale(1, 1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 123, ../sass/header.scss */
 #top-bar {
   transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
@@ -72,48 +192,61 @@
   align-items: flex-start;
 }
 
-/* line 106, ../sass/header.scss */
+/* line 165, ../sass/header.scss */
 #logo-rueda {
-  background: blue url(../img/rueda.png) center center no-repeat;
   -webkit-animation: header-rueda 3s;
+  background: url(../img/rueda.png) center center no-repeat;
   width: 80px;
   height: 80px;
   background-size: 80px 80px;
   position: absolute;
   top: 10px;
-  left: 15%;
-  z-index: 0;
+  left: calc(10% + 65px);
+  z-index: 10000;
   opacity: 0;
 }
 
-/* line 122, ../sass/header.scss */
+/* line 180, ../sass/header.scss */
 #logo-texto-full {
+  -webkit-animation: header-full 3s;
   max-width: 300px;
   position: absolute;
   top: 10px;
-  left: calc(10% + 65px);
-  background: pink url(../img/logofull.png) center center no-repeat;
+  background: url(../img/logofull.png) center center no-repeat;
   background-size: contain;
   height: 80px;
   width: 185px;
 }
+@media (min-width: 980px) and (max-width: 1919px) {
+  /* line 180, ../sass/header.scss */
+  #logo-texto-full {
+    left: calc(10% + 65px);
+  }
+}
+@media (min-width: 1920px) {
+  /* line 180, ../sass/header.scss */
+  #logo-texto-full {
+    left: calc(25% + 30px);
+  }
+}
 
-/* line 134, ../sass/header.scss */
+/* line 200, ../sass/header.scss */
 #logo-texto {
+  -webkit-animation: header-texto 3s;
   max-width: 300px;
   position: absolute;
   top: 10px;
-  left: calc(10% + 65px);
-  background: pink url(../img/letras.png) center center no-repeat;
-  background-size: contain;
+  left: calc(10% + 143px);
+  background: url(../img/letras.png) center center no-repeat;
+  background-size: 105px 80px;
   height: 80px;
-  width: 80px;
-  z-index: -1;
+  width: 110px;
+  opacity: 0;
 }
 
-/* line 147, ../sass/header.scss */
+/* line 214, ../sass/header.scss */
 .logo-container {
-  -webkit-animation: logo-container-anim 3s;
+  -webkit-animation: header-container 3s;
   width: 980px;
   -webkit-box-ordinal-group: 1;
   -moz-box-ordinal-group: 1;
@@ -128,7 +261,7 @@
 }
 
 @media (max-width: 979px) {
-  /* line 164, ../sass/header.scss */
+  /* line 231, ../sass/header.scss */
   .top-bar-spacer {
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
@@ -146,7 +279,7 @@
   }
 }
 @media (min-width: 980px) {
-  /* line 182, ../sass/header.scss */
+  /* line 250, ../sass/header.scss */
   .top-bar-spacer {
     -webkit-box-ordinal-group: 1;
     -moz-box-ordinal-group: 1;
@@ -161,59 +294,5 @@
     -webkit-align-self: stretch;
     -ms-flex-item-align: stretch;
     align-self: stretch;
-  }
-}
-@-webkit-keyframes logo-texto-fade {
-  0% {
-    background: url(../img/letras.svg) center center no-repeat;
-    height: 300px;
-    max-width: 300px;
-    background-size: contain;
-    top: 200px;
-    left: 50%;
-    opacity: 0;
-  }
-  66% {
-    opacity: 1;
-    top: 200px;
-    background: url(../img/letras.svg) center center no-repeat;
-    height: 300px;
-    max-width: 300px;
-    left: 50%;
-    background-size: contain;
-  }
-  66.1% {
-    background: url(../img/logofull.png) center center no-repeat;
-    top: 237px;
-    height: 226px;
-    max-width: 800px;
-    left: calc(50% - 368px);
-    background-size: contain;
-  }
-  90% {
-    top: 10px;
-    left: calc(50% - 150px);
-  }
-  100% {
-    background-size: contain;
-  }
-}
-@-webkit-keyframes logo-container-anim {
-  0% {
-    height: 640px;
-    position: fixed;
-    width: 980px;
-    top: 0px;
-    left: calc(50% - 490px);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  80% {
-    height: 640px;
-  }
-  100% {
-    height: 100px;
   }
 }

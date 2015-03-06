@@ -15,36 +15,34 @@ body {
 }
 
 @-webkit-keyframes main-up {
-  0%{
-    top: 640px;
+  0% {
+    top: 590px;
   }
 
-  67%{
-    top:640px;
+  60% {
+    top: 590px;
   }
 
-  100%{
-    top: 100px;
+  100% {
+    top: 60px;
   }
 
 }
-
-
 
 @media (max-width: 979px) {
   .content {
     -webkit-animation: main-up 3s;
     width: 100%;
-    height: 2800px;
+    height: 2540px;
     position: absolute;
-    top: 100px;
+    top: 60px;
     //    left: 50%;
     //    margin-left: -490px;
     //  background-color: #EC407A;
     transition: top 2s;
-    //  -webkit-box-shadow: 0px 0px 15px #000000;
-    //  -moz-box-shadow: 0px 0px 15px #000000;
-    //  box-shadow: 0px 0px 15px #000000;
+    //      -webkit-box-shadow: 0px 0px 15px #000000;
+    //      -moz-box-shadow: 0px 0px 15px #000000;
+    //      box-shadow: 0px 0px 15px #000000;
   }
 
 }
@@ -53,16 +51,16 @@ body {
   .content {
     -webkit-animation: main-up 3s;
     width: 980px;
-    height: 2800px;
+    height: 2540px;
     position: absolute;
-    top: 100px;
+    top: 60px;
     left: 50%;
     margin-left: -490px;
     //  background-color: #EC407A;
     transition: top 2s;
-    //  -webkit-box-shadow: 0px 0px 15px #000000;
-    //  -moz-box-shadow: 0px 0px 15px #000000;
-    //  box-shadow: 0px 0px 15px #000000;
+    //      -webkit-box-shadow: 0px 0px 15px #000000;
+    //      -moz-box-shadow: 0px 0px 15px #000000;
+    //      box-shadow: 0px 0px 15px #000000;
   }
 
 }
@@ -88,7 +86,7 @@ body {
 .portfolio {
   background-size: 100%;
   background: #ff7d00 url("../img/fondodentado.png") center center no-repeat;
-  height: 540px;
+  height: 500px;
 }
 
 @media (max-width: 979px) {
@@ -192,10 +190,9 @@ body {
 
 .portfolio-work {
   width: 280px;
-  background-color: rgba(#444444, 0.7);
+  background-color: rgba(#444444, 1);
   height: 300px;
-  position: relative;
-  top: 25px;
+  margin-top: 25px;
   margin-left: 40px;
   display: inline-block;
   transition: all 1s;
@@ -206,19 +203,12 @@ body {
 
 .portfolio-work-expanded {
   position: fixed;
-  width: 1000px;
+  top: calc(50% - 300px);
+  left: calc(50% - 490px);
   height: 600px;
-  //  transform: scale(3,2);
-  z-index: 15;
-  //  margin-top: 10%;
-  left: 50%;
-  margin-left: -500px;
-  top: 50%;
-  margin-top: -300px;
-}
+  width: 980px;
+  z-index: 14;
 
-.portfolio-work:hover {
-  //  transform: scale(1.1, 1.1);
 }
 
 .portfolio-footer {
@@ -232,20 +222,34 @@ body {
 
 .view-container {
   position: relative;
-  height: 2800px !important;
+  height: 2540px !important;
   overflow: hidden;
 
+}
+
+#portfolio-background {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.portfolio-background-show {
+  opacity: 1 !important;
 }
 
 /* EMPRESA */
 
 /* Portfolio */
 
-.empresa,
-.contacto {
+.empresa {
   background-size: 100%;
   background: #ff7d00 url("../img/fondodentado.png") center center no-repeat;
   height: 540px;
+}
+
+.contacto {
+  background-size: 100%;
+  //  background: #ff7d00 url("../img/fondodentado.png") top center no-repeat;
+  height: 500px;
 }
 
 .contacto-inner {
@@ -264,6 +268,95 @@ body {
   left: 10px;
   font-size: 2.1em;
 
+}
+
+//.main-footer {
+//  margin-top: -28px;
+//  text {
+//    font-family: Roboto, serif !important;
+//    tspan {
+//      font-family: Roboto, serif !important;
+//    }
+//  }
+//}
+
+.contacto-top {
+  background-color: #000000;
+  width: 100%;
+  height: 350px;
+  font-family: "Roboto", sans-serif;
+  .contacto-top-titulo{
+    font-size: 35px;
+    color: #ffffff;
+    font-weight: 300;
+    margin-left: 10px;
+  }
+  .contacto-top-subtitulo{
+    font-size: 20px;
+    color: #00c7ff;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+}
+
+.contacto-bottom {
+  background-color: #ff7d00;
+  width: 100%;
+  height: 150px;
+  div{
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    float: left;
+    width: 33%;
+    height: 100%;
+    p{
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 20px;
+      span{
+        white-space: nowrap;
+        font-size: 20px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.contacto-form {
+  position: relative;
+  bottom: 0px;
+  left: calc(50% - 250px);
+  width: 600px;
+  .contacto-enviar {
+    background: #00c7ff !important;
+    color: #ffffff;
+    border: 0px solid;
+    margin-left: 445px;
+    width: 60px;
+  }
+  .contacto-wrapper {
+
+    input, textarea {
+      margin-bottom: 10px;
+      width: 500px;
+    }
+    img {
+      height: 20px;
+      position: relative;
+      top: 4px;
+      left: -50px;
+    }
+  }
+}
+
+.footer-logo {
+//  position: absolute;
+//  bottom: 150px;
+  margin-top: 30px;
+  margin-left: 0;
+  width: 150px;
 }
 
 .empresa-subtitle,
@@ -304,6 +397,8 @@ body {
 
 .empresa-person {
   width: 200px;
+  max-width: 200px;
+  overflow: hidden;
   background-color: #444444;
   height: 300px;
   position: absolute;
@@ -311,9 +406,34 @@ body {
   margin-left: 35px;
   display: inline-block;
   transition: transform 1s;
-  -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-  box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+  //  -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+  //  -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+  //  box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+}
+
+.empresa-caja {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 300px !important;
+  width: 400px !important;
+  transition: all 1s;
+
+}
+
+#empresa-textodiseno,
+#empresa-diegoYankelevich,
+#ampliar,
+#empresa-textosmouseover {
+  tspan, text {
+    font-family: "Roboto", sans-serif !important;
+    font-weight: 400 !important;
+  }
+}
+
+.empresa-caja:hover {
+
+  left: -200px;
 }
 
 .empresa-name {
@@ -348,7 +468,7 @@ body {
 }
 
 .empresa-person:hover {
-  transform: scale(1.1, 1.1);
+  //  transform: scale(1.1, 1.1);
 }
 
 .empresa-footer,
@@ -364,17 +484,21 @@ body {
 /* EMPRESA END*/
 
 .shadow {
-  position: absolute;
-  top: 40px;
-  left: 0;
-  right: 0;
-  bottom: 50px;
-  pointer-events: none;
-  @include box-shadow(rgba(50, 50, 50, 0.4) 0 0 25px, rgba(black, 0.8) 0 0 15px 1px inset);
+  //  position: absolute;
+  //  width: 980px;
+  background: rgba(blue, 0.8);
+  //  height: 200px;
+  //  top:50px;
+  //  left:0px;
+  //  right: 0px;
+  //  top: 100px;
+  //  pointer-events: none;
 
-//  background: #ff7d00 url("../img/mainbox.png") center center no-repeat;
-  background-size: contain;
-  z-index: 4;
+  //  height: 100%;
+  @include box-shadow(rgba(50, 50, 50, 0.3) 1px 1px 1px, rgba(black, 0.3) 1px 1px 1px 1px);
+  //  background: #ff7d00 url("../img/mainbox.png") center center no-repeat;
+  //  background-size: contain;
+  //  z-index: 40;
 }
 
 //.separator {
@@ -391,13 +515,77 @@ body {
 
 }
 
+#portfolio-thumb {
+  opacity: 1;
+  transition: all 1s;
+}
+
+.portfolio-img-over {
+  position: absolute !important;
+  transform: scale(10, 10) !important;
+  transform-origin: 0% 0% !important;
+  //  background-position:50% 50% !important;
+  //  background-size:cover !important;
+  opacity: 0 !important;
+}
+
+#barra_naranja_1_,
+#ampliar,
+#triangulo_negro_1_ {
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(0px, -200px);
+}
+
+.barra_naranja_1_-hover,
+.ampliar-hover {
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+}
+
+#texto_detalles {
+  tspan {
+
+    font-family: Roboto, serif !important;
+    font-weight: 300 !important;
+  }
+
+}
+
+#titulo_prensa_energetica_1_,
+#texto_detalles_1_,
+#triangulo_naranja,
+#linea_naranka {
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(-200px, 0px);
+  text {
+
+    tspan:nth-child(1) {
+      font-family: Roboto, serif !important;
+      font-weight: 300;
+
+    }
+    tspan:nth-child(2) {
+      font-family: Roboto, serif !important;
+      font-weight: 700;
+
+    }
+  }
+}
+
+.portfolio-work-over {
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+}
+
 .flex-container-contacto {
   @include background-image(linear-gradient(to right, rgba(#ff7d00, 0.5), #ff7d00));
 
   position: relative;
   top: 50px;
   left: 0px;
-  height: 300px;
+  height: 350px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -477,15 +665,6 @@ body {
   }
 }
 
-.contacto-wrapper {
-  img {
-    height: 20px;
-    position: relative;
-    top: 4px;
-    left: -40px;
-  }
-}
-
 /*
     Legacy Firefox implementation treats all flex containers
     as inline-block elements.
@@ -502,14 +681,14 @@ body {
 @media (max-width: 979px) {
   .separador {
     width: 100%;
-//    background-color: #444444;
-    background: #ff7d00 url("../img/separador.png") center center no-repeat;
+    background-color: #444444;
+    //    background: #ff7d00 url("../img/separador.png") center center no-repeat;
     background-size: contain;
 
     height: 300px !important;
-//    -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-//    -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-//    box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+    //    -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+    //    -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+    //    box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     h1 {
@@ -530,13 +709,13 @@ body {
 @media (min-width: 980px) {
   .separador {
     width: 980px;
-//    background-color: #444444;
-    background: #ff7d00 url("../img/separador.png") center center no-repeat;
+    background-color: #444444;
+    //    background: #ff7d00 url("../img/separador.png") center center no-repeat;
     background-size: contain;
     height: 300px !important;
-//    -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-//    -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-//    box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+    //    -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+    //    -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+    //    box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
     h1 {
@@ -579,32 +758,31 @@ body {
   transition: all 1s;
 }
 
-
 @-webkit-keyframes menu-fade {
-  0%{
+  0% {
     opacity: 0;
   }
 
-  90%{
+  90% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 
 }
 
-#nav-bar{
+#nav-bar {
   -webkit-animation: menu-fade 4s;
   float: right;
   width: 40%;
   margin-top: -50px;
   text-align: right;
   margin-right: 10px;
-  .link{
+  .link {
 
     display: inline;
-    a{
+    a {
       margin-left: 30px;
       text-decoration: none;
       font-family: "Roboto", sans-serif;

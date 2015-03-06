@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 224 240" enable-background="new 0 0 224 240" xml:space="preserve">
+<g id="background">
+	<rect y="0" fill="#1A171B" width="223.961" height="239.959"/>
+</g>
+<g id="linea_naranka">
+	<line id="linea_naranja" fill="none" stroke="#E7511E" stroke-miterlimit="10" x1="17.946" y1="70.388" x2="204.799" y2="70.388"/>
+</g>
+<g id="triangulo_naranja">
+	<polygon id="traingulo_naranja" fill="#E7511E" points="8.856,36.89 8.856,23.792 15.405,30.341 	"/>
+</g>
+<g id="barra_naranja_1_">
+	<rect id="barra_naranja" x="0.034" y="197.033" fill="#E7511E" width="223.961" height="34.127"/>
+</g>
+<g id="texto_detalles_1_">
+	<text id="texto_detalles" transform="matrix(1 0 0 1 17.9463 113.9785)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="14.3333">Imagen</tspan><tspan x="0" y="17.2" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="14.3333">Retoque fotográfico</tspan><tspan x="0" y="34.4" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="14.3333">Diseño editorial</tspan><tspan x="0" y="51.6" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="14.3333">Diseño web</tspan></text>
+</g>
+<g id="titulo_prensa_energetica_1_">
+	<text id="titulo_prensa_energetica" transform="matrix(1 0 0 1 17.9463 37.6113)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Roboto-Light'" font-size="23.0309">Revista </tspan><tspan x="0" y="19.997" fill="#FFFFFF" font-family="'Roboto-Bold'" font-size="23.0309">Prensa energetica</tspan></text>
+</g>
+<g id="ampliar">
+	<rect x="87.472" y="210.097" fill="none" width="49.085" height="11.198"/>
+	<text transform="matrix(1 0 0 1 87.4717 220.8945)" fill="#FFFFFF" font-family="'Roboto-Bold'" font-size="14.3975">ampliar</text>
+</g>
+<g id="triangulo_negro_1_">
+	<polygon id="triangulo_negro" fill="#1A171B" points="82.36,220.456 82.36,213.983 85.597,217.22 	"/>
+</g>
+</svg>

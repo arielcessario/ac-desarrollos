@@ -7,6 +7,8 @@ angular.module('ac', [
     'ngAnimate',
     'ngAria',
     'ac.mainView',
+    'ac.cajaPortDir',
+    'ac.cajaEmpDir',
     'myApp.view2',
     'myApp.version'
 ]).

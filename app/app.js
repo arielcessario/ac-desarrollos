@@ -7,10 +7,7 @@ angular.module('ac', [
     'ngAnimate',
     'ngAria',
     'ac.mainView',
-    'ac.cajaPortDir',
-    'ac.cajaEmpDir',
-    'myApp.view2',
-    'myApp.version'
+    'ac.cajaPortDir'
 ]).
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/mainView'});
@@ -23,20 +20,20 @@ angular.module('ac', [
 MainController.$inject = ['$scope', '$location'];
 function MainController($scope, $location) {
     var vm = this;
-    //vm.isScrolled = false;
-    vm.entrar = entrar;
-    vm.moved = false;
-    vm.goToAnchor = goToAnchor;
-
-    function entrar() {
-        $scope.moved = !$scope.moved;
-    }
-
-    function goToAnchor(id) {
-        $location.hash(id);
-    }
-
-    //console.log($scope.isScrolled);
+    ////vm.isScrolled = false;
+    //vm.entrar = entrar;
+    //vm.moved = false;
+    //vm.goToAnchor = goToAnchor;
+    //
+    //function entrar() {
+    //    $scope.moved = !$scope.moved;
+    //}
+    //
+    //function goToAnchor(id) {
+    //    $location.hash(id);
+    //}
+    //
+    ////console.log($scope.isScrolled);
 }
 
 function scroll($window) {
@@ -59,6 +56,8 @@ function scroll($window) {
                 //    scope.anterior = element[0].scrollTop;
                 //    scope.moved = true;
                 //}
+
+                scope.moved = element[0].scrollTop > 0;
 
                 //if (element[0].scrollTop > 0) {
                 //    scope.moved = true;
@@ -88,7 +87,7 @@ function scrollff($window) {
             angular.element($window).bind("scroll", function () {
                 //console.log(element[0].scrollTop);
                 //console.log(attrs.isScrolled);
-
+                scope.moved = element[0].scrollTop > 0;
 
                 //if (element[0].scrollTop > 0) {
                 //    scope.moved = true;

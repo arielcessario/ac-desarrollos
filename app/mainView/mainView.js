@@ -4,8 +4,7 @@
     'use strict';
 
     angular.module('ac.mainView', [
-        'ngRoute',
-        'ac.cajaPortDir'])
+        'ngRoute'])
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider.when('/', {
                 templateUrl: './mainView/mainView.html',
@@ -14,20 +13,35 @@
         }])
         .controller('MainViewCtrl', MainViewCtrl);
 
-    MainViewCtrl.$inject = ['$http', '$location'];
+    MainViewCtrl.$inject = ['$http', '$location', '$interval'];
 
-    function MainViewCtrl($http, $location) {
+    function MainViewCtrl($http, $location, $interval) {
 
         var vm = this;
 
-        vm.swipeLeft = swipeLeft;
-        vm.sendMail = sendMail;
-        //vm.cajaPortfolio = 'mainView/caja-portfolio.html?i='+ Math.random()+'&color=FF0000';
-        vm.contactoFooter = 'mainView/contact-footer.html?i='+ Math.random()+'&color=FF0000';
+        vm.slide01 = true;
+        $interval(callAtTimeout, 5000);
+        //setInterval(function () {alert("Hello")}, 3000);
+        //vm.swipeLeft = swipeLeft;
+        //vm.sendMail = sendMail;
+        ////vm.cajaPortfolio = 'mainView/caja-portfolio.html?i='+ Math.random()+'&color=FF0000';
+        //vm.contactoFooter = 'mainView/contact-footer.html?i='+ Math.random()+'&color=FF0000';
 
 
 
+        function callAtTimeout(){
 
+            if(vm.slide01){
+                vm.slide01 = false;
+                vm.slide02 = true;
+            }else if(vm.slide02){
+
+                vm.slide01 = true;
+                vm.slide02 = false;
+            }
+
+            //vm.slide02 = !vm.slide02;
+        }
         //vm.move = move;
         //
         //function move(event){

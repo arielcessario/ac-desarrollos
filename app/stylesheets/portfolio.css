@@ -1,0 +1,175 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
+/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 11, ../sass/portfolio.scss */
+#portfolio {
+  width: 100%;
+  background: #444444 url("../img/portfolio.jpg") center center no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 24, ../sass/portfolio.scss */
+.portfolio-work {
+  width: 280px;
+  background-color: #444444;
+  height: 300px;
+  margin-top: 25px;
+  margin-left: 40px;
+  display: inline-block;
+  transition: all 1s;
+}
+
+/* line 37, ../sass/portfolio.scss */
+.portfolio-work-over {
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+}
+
+/* line 42, ../sass/portfolio.scss */
+#portfolio-thumb {
+  opacity: 1;
+  transition: all 1s;
+}
+
+/* line 47, ../sass/portfolio.scss */
+.portfolio-img-over {
+  position: absolute !important;
+  transform: scale(10, 10) !important;
+  transform-origin: 0% 0% !important;
+  opacity: 0 !important;
+}
+
+/* line 56, ../sass/portfolio.scss */
+#barra_naranja_1_,
+#ampliar,
+#triangulo_negro_1_ {
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(0px, -200px);
+}
+
+/* line 64, ../sass/portfolio.scss */
+.barra_naranja_1_-hover,
+.ampliar-hover {
+  opacity: 1 !important;
+  transform: translate(0px, 0px) !important;
+}
+
+/* line 71, ../sass/portfolio.scss */
+#texto_detalles tspan {
+  font-family: Roboto, serif !important;
+  font-weight: 300 !important;
+}
+
+/* line 79, ../sass/portfolio.scss */
+#titulo_prensa_energetica_1_,
+#texto_detalles_1_,
+#triangulo_naranja,
+#linea_naranka {
+  opacity: 0;
+  transition: all 1s;
+  transform: translate(-200px, 0px);
+}
+/* line 88, ../sass/portfolio.scss */
+#titulo_prensa_energetica_1_ text tspan:nth-child(1),
+#texto_detalles_1_ text tspan:nth-child(1),
+#triangulo_naranja text tspan:nth-child(1),
+#linea_naranka text tspan:nth-child(1) {
+  font-family: Roboto, serif !important;
+  font-weight: 300;
+}
+/* line 93, ../sass/portfolio.scss */
+#titulo_prensa_energetica_1_ text tspan:nth-child(2),
+#texto_detalles_1_ text tspan:nth-child(2),
+#triangulo_naranja text tspan:nth-child(2),
+#linea_naranka text tspan:nth-child(2) {
+  font-family: Roboto, serif !important;
+  font-weight: 700;
+}
+
+/* line 101, ../sass/portfolio.scss */
+#portfolio-background {
+  opacity: 0;
+  transition: all 1s;
+}
+
+/* line 106, ../sass/portfolio.scss */
+.portfolio-background-show {
+  opacity: 1 !important;
+}
+
+/* line 111, ../sass/portfolio.scss */
+#ampliar tspan, #ampliar text {
+  font-family: "Roboto", sans-serif !important;
+  font-weight: 400 !important;
+}

@@ -9,29 +9,32 @@
 
 
 #portfolio {
-//  position: absolute;
-//  top:1600px;
   width: 100%;
-//  background-color: #ffff00;
-//  height: 400px !important;
-  background: #444444 url("../img/portfolio.jpg") center center no-repeat;
+//  background: #00c7ff url("../img/portfolio.jpg") center center no-repeat;
+  background: #000000 url("../img/portfolio.jpg") center center no-repeat;
   background-size: contain;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+.portfolio-item{
+  flex: 1 1 auto;
+  height: 310px;
+  padding: 15px;
+//  background-color: blue;
 }
 
 .portfolio-work {
   width: 280px;
   background-color: rgba(#444444, 1);
   height: 300px;
-  margin-top: 25px;
-  margin-left: 40px;
-  display: inline-block;
+  margin: auto;
+//  margin-top: 25px;
   transition: all 1s;
-  //  -webkit-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-  //  -moz-box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-  //  box-shadow: inset 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+//  margin-left: auto;
+  overflow: hidden;
 }
 
 .portfolio-work-over {
@@ -45,9 +48,9 @@
 }
 
 .portfolio-img-over {
-  position: absolute !important;
-  transform: scale(10, 10) !important;
+//  position: absolute !important;
   transform-origin: 0% 0% !important;
+  transform: scale(10, 10) !important;
   //  background-position:50% 50% !important;
   //  background-size:cover !important;
   opacity: 0 !important;

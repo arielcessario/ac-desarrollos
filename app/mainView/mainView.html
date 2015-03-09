@@ -14,40 +14,85 @@
         </div>
         <!--<div id="output"></div>-->
     </div>
-    <div id="frase-01"></div>
+    <div id="frase-01">
+        <img src="./img/frase01.jpg" alt=""/>
+    </div>
     <div id="empresa"></div>
     <div id="frase-02">
         <img src="./img/frase02.jpg" alt=""/>
     </div>
     <div id="portfolio">
-        <div class="portfolio-work" id="portofolio-01">
-            <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                            text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                            text4="Diseño Web"></portfolio-caja>
+        <div class="portfolio-item">
+            <div class="portfolio-work" id="portofolio-01">
+                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
+                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
+                                text4="Diseño Web"></portfolio-caja>
+            </div>
         </div>
-        <div class="portfolio-work" id="portofolio-02">
-            <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                            text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                            text4="Diseño Web"></portfolio-caja>
+        <div class="portfolio-item">
+            <div class="portfolio-work" id="portofolio-02">
+                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
+                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
+                                text4="Diseño Web"></portfolio-caja>
+            </div>
         </div>
-        <div class="portfolio-work" id="portofolio-03">
-            <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                            text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                            text4="Diseño Web"></portfolio-caja>
+        <div class="portfolio-item">
+            <div class="portfolio-work" id="portofolio-03">
+                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
+                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
+                                text4="Diseño Web"></portfolio-caja>
+            </div>
         </div>
-        <div class="portfolio-work" id="portofolio-04">
-            <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                            text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                            text4="Diseño Web"></portfolio-caja>
+        <div class="portfolio-item">
+            <div class="portfolio-work" id="portofolio-04">
+                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
+                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
+                                text4="Diseño Web"></portfolio-caja>
+            </div>
         </div>
-        <div class="portfolio-work" id="portofolio-05">
-            <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                            text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                            text4="Diseño Web"></portfolio-caja>
-        </div>
+        <!--<div class="portfolio-item">-->
+            <!--<div class="portfolio-work" id="portofolio-05">-->
+                <!--<portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"-->
+                                <!--text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"-->
+                                <!--text4="Diseño Web"></portfolio-caja>-->
+            <!--</div>-->
+        <!--</div>-->
+
     </div>
-    <div id="contacto"></div>
-    <div id="footer"></div>
+    <div id="contacto">
+        <span class="contacto-top-titulo">Consultanos</span><br/>
+        <span class="contacto-top-subtitulo">sobre tu proyecto!</span>
+        <form class="contacto-form" novalidate>
+            <div class="contacto-wrapper"><input placeholder="Nombre:" ng-model="mainViewCtrl.nombre" type="text"/>
+                <img src="img/logo%202.png" alt=""/>
+            </div>
+
+            <div class="contacto-wrapper"><input placeholder="Mail:" ng-model="mainViewCtrl.email" type="text"/>
+                <img src="img/logo%203.png" alt=""/>
+            </div>
+            <div class="contacto-wrapper"><input placeholder="Asunto:" ng-model="mainViewCtrl.asunto" type="text"/>
+                <img src="img/logo%201.png" alt=""/>
+            </div>
+            <div class="contacto-wrapper">
+                <textarea ng-model="mainViewCtrl.mensaje" rows="5" placeholder="Escribe aquí tu consulta:" ></textarea>
+            </div>
+            <button class="contacto-enviar" ng-click="mainViewCtrl.sendMail()">Enviar</button>
+
+        </form>
+        <div class="contacto-enviado" ng-show="mainViewCtrl.enviado">Muchas gracias por escribirnos! Su mensaje será contestado a la brevedad. </div>
+
+    </div>
+    <div id="footer">
+        <div>Contáctenos:
+            <p>Tel: <span>153111xxxx</span></p>
+            <p>Email: <span>ventas@ac-desarrollos.com</span></p>
+            <p>Web: <span>ac-desarrollos.com</span></p>
+        </div>
+        <div class="footer-logo">
+            <!--<img class="footer-logo" src="./img/logofull.png" alt=""/>-->
+        </div>
+        <div>Seguinos:</div>
+    </div>
 
 </div>
 

@@ -1,0 +1,42 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/reset";
+@import "compass";
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
+
+
+#footer{
+  width: 100%;
+  background-size: contain;
+  background-color: #ff7d00;
+  height: 150px;
+  display: flex;
+  flex-wrap: nowrap;
+  div{
+    padding-left: 30px;
+    padding-top: 15px;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    p{
+
+      margin-top: 5px;
+      font-weight: 700;
+      font-size: 20px;
+      span{
+        white-space: nowrap;
+        font-size: 20px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .footer-logo{
+    background: url(../img/logofull.png) center center no-repeat;
+    background-size: 50%;
+  }
+}

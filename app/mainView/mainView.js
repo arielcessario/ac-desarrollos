@@ -13,9 +13,9 @@
         }])
         .controller('MainViewCtrl', MainViewCtrl);
 
-    MainViewCtrl.$inject = ['$http', '$location', '$interval'];
+    MainViewCtrl.$inject = ['$http', '$location', '$interval', '$timeout'];
 
-    function MainViewCtrl($http, $location, $interval) {
+    function MainViewCtrl($http, $location, $interval, $timeout) {
 
         var vm = this;
 
@@ -23,7 +23,8 @@
         $interval(callAtTimeout, 5000);
         //setInterval(function () {alert("Hello")}, 3000);
         //vm.swipeLeft = swipeLeft;
-        //vm.sendMail = sendMail;
+        vm.sendMail = sendMail;
+        vm.enviado = false;
         ////vm.cajaPortfolio = 'mainView/caja-portfolio.html?i='+ Math.random()+'&color=FF0000';
         //vm.contactoFooter = 'mainView/contact-footer.html?i='+ Math.random()+'&color=FF0000';
 
@@ -63,11 +64,16 @@
         function sendMail() {
 
             //console.log(vm.nombre);
-            return $http.post('../contact.php',
+            return $http.post('./contact.php',
                 {'email': vm.email, 'nombre': vm.nombre, 'mensaje': vm.mensaje, 'asunto': vm.asunto})
                 .success(
                 function (data) {
                     console.log(data);
+                    vm.enviado = true;
+                    $timeout(hideMessage, 3000);
+                    function hideMessage(){
+                        vm.enviado = false;
+                    }
                 })
                 .error(function (data) {
                     console.log(data);

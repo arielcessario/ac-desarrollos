@@ -88,85 +88,84 @@ html {
   width: 100%;
   background-color: #000000;
   transition: all 0.5s;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .nav-bar-mini {
   height: 50px !important;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .home-hidden {
   visibility: collapse;
   transform: scale(10, 10);
 }
 
-/* line 37, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 .slide {
   transform: scale(1, 1);
   opacity: 1;
   transition: all 1s;
-  clip: rect(0px, auto, 600px, 0px);
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 .slide.ng-add {
-  clip: rect(0px, auto, 600px, 0px);
   transform: scale(1, 1);
   opacity: 1;
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .slide.ng-hide {
-  opacity: 0;
   transform: scale(10, 10);
-  clip: rect(0px, auto, 600px, 0px);
+  opacity: 0;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 #home {
   width: 100%;
   height: 600px !important;
   overflow: hidden;
 }
-/* line 63, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #home #img01 {
   background: url("../img/background01.jpg") center center no-repeat;
 }
-/* line 66, ../sass/screen.scss */
+/* line 70, ../sass/screen.scss */
 #home #img02 {
   background: url("../img/background02.jpg") center center no-repeat;
 }
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 #home #img01, #home #img02 {
-  position: absolute;
-  clip: rect(0px, auto, 600px, 0px);
   z-index: 0;
-  background-size: 100% 100%;
+  background-size: contain;
   transition: all 0.5s;
 }
 @media (max-width: 800px) {
-  /* line 70, ../sass/screen.scss */
+  /* line 74, ../sass/screen.scss */
   #home #img01, #home #img02 {
     height: calc(1200px / 2);
-    width: calc(1920px / 2);
+    width: 100%;
   }
 }
 @media (min-width: 801px) and (max-width: 1366px) {
-  /* line 70, ../sass/screen.scss */
+  /* line 74, ../sass/screen.scss */
   #home #img01, #home #img02 {
     height: calc(1200px / 1.5);
-    width: calc(1920px / 1.5);
+    width: 100%;
   }
 }
 @media (min-width: 1367px) {
-  /* line 70, ../sass/screen.scss */
+  /* line 74, ../sass/screen.scss */
   #home #img01, #home #img02 {
     height: 1200px;
-    width: 1920px;
+    width: 100%;
   }
 }
-/* line 99, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 #home #text01, #home #text02 {
   position: absolute;
   top: 200px;
@@ -178,7 +177,7 @@ html {
   text-align: center;
   max-width: 900px;
 }
-/* line 111, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 #home #button01, #home #button02 {
   border: 1px solid white;
   position: absolute;
@@ -190,7 +189,7 @@ html {
   padding: 20px;
   transition: all 1s;
 }
-/* line 123, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 #home #button01:hover,
 #home #button02:hover {
   background-color: rgba(0, 199, 255, 0.5);
@@ -198,51 +197,101 @@ html {
   box-shadow: 2px 2px 10px #FFFFFF;
 }
 
-/* line 133, ../sass/screen.scss */
-#frase-01 {
-  width: 100%;
-  height: 300px !important;
-  z-index: 10;
-  background: #FF7D00 url("../img/frase01.jpg") center center no-repeat;
-  background-size: contain;
-}
-
-/* line 143, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 #empresa {
   width: 100%;
-  height: 400px !important;
-  background: red url("../img/empresa.jpg") center center no-repeat;
+  background: black url("../img/empresa.jpg") center center no-repeat;
   background-size: contain;
 }
 
-/* line 153, ../sass/screen.scss */
-#frase-02 {
+/* line 149, ../sass/screen.scss */
+#frase-02, #frase-01 {
   width: 100%;
   height: auto;
 }
-/* line 161, ../sass/screen.scss */
-#frase-02 img {
+/* line 152, ../sass/screen.scss */
+#frase-02 img, #frase-01 img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 171, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #contacto {
   width: 100%;
   height: 400px !important;
   background: #000000 url("../img/contacto.jpg") center center no-repeat;
   background-size: contain;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+}
+/* line 171, ../sass/screen.scss */
+#contacto .contacto-top-titulo {
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: 300;
+  margin-left: 10px;
+}
+/* line 177, ../sass/screen.scss */
+#contacto .contacto-top-subtitulo {
+  font-size: 20px;
+  color: #00c7ff;
+  font-weight: 700;
+  margin-left: 10px;
 }
 
-/* line 179, ../sass/screen.scss */
-#footer {
-  width: 100%;
-  height: 200px !important;
-  background: green url("../img/footer.jpg") center center no-repeat;
-  background-size: contain;
+/* line 185, ../sass/screen.scss */
+.contacto-form {
+  position: relative;
+  bottom: 0px;
+  left: calc(50% - 250px);
+  width: 600px;
+}
+/* line 190, ../sass/screen.scss */
+.contacto-form .contacto-enviar {
+  background: #00c7ff !important;
+  color: #ffffff;
+  border: 0px solid;
+  margin-left: 445px;
+  width: 60px;
+}
+/* line 199, ../sass/screen.scss */
+.contacto-form .contacto-wrapper input, .contacto-form .contacto-wrapper textarea {
+  margin-bottom: 10px;
+  width: 500px;
+}
+/* line 203, ../sass/screen.scss */
+.contacto-form .contacto-wrapper img {
+  height: 20px;
+  position: relative;
+  top: 4px;
+  left: -50px;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
+.contacto-enviado {
+  position: relative;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  color: #ffffff;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+/* line 227, ../sass/screen.scss */
+.contacto-enviado.ng-add {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+/* line 232, ../sass/screen.scss */
+.contacto-enviado.ng-hide {
+  opacity: 0;
+  transform: scale(10, 10);
+}
+
+/* line 238, ../sass/screen.scss */
 .screen-shadow {
   position: fixed;
   top: 0;
@@ -253,7 +302,7 @@ html {
   z-index: 14;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 .btn-close {
   font-size: 2em;
   color: white;
@@ -263,7 +312,7 @@ html {
   z-index: 16;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .btn-hidden {
   font-size: 0px;
   transition: all 1s;

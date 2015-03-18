@@ -6,113 +6,335 @@
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
 
-
-
 #portfolio {
+  //  position: absolute;
+  //  top:900px;
   width: 100%;
-//  background: #00c7ff url("../img/portfolio.jpg") center center no-repeat;
-  background: #000000 url("../img/portfolio.jpg") center center no-repeat;
-  background-size: contain;
+  height: auto;
+  min-height: 650px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  padding-bottom: 20px;
-}
-
-.portfolio-item{
-  flex: 1 1 auto;
-  height: 310px;
-  padding: 15px;
-//  background-color: blue;
-}
-
-.portfolio-work {
-  width: 280px;
-  background-color: rgba(#444444, 1);
-  height: 300px;
-  margin: auto;
-//  margin-top: 25px;
-  transition: all 1s;
-//  margin-left: auto;
-  overflow: hidden;
-}
-
-.portfolio-work-over {
-  opacity: 1 !important;
-  transform: translate(0px, 0px) !important;
-}
-
-#portfolio-thumb {
-  opacity: 1;
-  transition: all 1s;
-}
-
-.portfolio-img-over {
-//  position: absolute !important;
-  transform-origin: 0% 0% !important;
-  transform: scale(10, 10) !important;
-  //  background-position:50% 50% !important;
-  //  background-size:cover !important;
-  opacity: 0 !important;
-}
-
-#barra_naranja_1_,
-#ampliar,
-#triangulo_negro_1_ {
-  opacity: 0;
-  transition: all 1s;
-  transform: translate(0px, -200px);
-}
-
-.barra_naranja_1_-hover,
-.ampliar-hover {
-  opacity: 1 !important;
-  transform: translate(0px, 0px) !important;
-}
-
-#texto_detalles {
-  tspan {
-
-    font-family: Roboto, serif !important;
-    font-weight: 300 !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #E25F1C;
+  //  height: 400px !important;
+  img {
+    max-width: 100%;
+    max-height: 100%;
   }
 
-}
+  #portfolio-titulo {
+    @media (max-width: 400px) {
 
-#titulo_prensa_energetica_1_,
-#texto_detalles_1_,
-#triangulo_naranja,
-#linea_naranka {
-  opacity: 0;
-  transition: all 1s;
-  transform: translate(-200px, 0px);
-  text {
-
-    tspan:nth-child(1) {
-      font-family: Roboto, serif !important;
-      font-weight: 300;
-
+      font-size: 80px;
+      margin-right: 0px;
+      margin-bottom: 100px;
     }
-    tspan:nth-child(2) {
-      font-family: Roboto, serif !important;
-      font-weight: 700;
 
+    @media (min-width: 401px) {
+
+//      margin-right: 80px;
+      font-size: 110px;
     }
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    //    margin-right: 80px;
+//    margin-bottom: 20px;
+    margin-bottom: 70px;
+    @media (max-width: 400px) {
+      height: 0px;
+    }
+
+    @media (min-width: 401px) {
+
+      height: 70px;
+    }
+
+  }
+
+  #portfolio-detalle {
+
+    display: flex;
+    @media (max-width: 649px) {
+      max-width: 650px;
+      flex-direction: column;
+    }
+
+    @media (min-width: 650px) {
+      width: 650px;
+      flex-direction: row;
+    }
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .proyecto {
+    //      margin: 0px;
+    width: 150px;
+    height: 150px;
+    transition: all 0.5s;
+    margin: 5px;
+    background-size: contain;
+    //      perspective: 1000;
+
+  }
+
+  .proyecto:hover .flipper, .proyecto.hover .flipper {
+    transform: rotateY(180deg);
+  }
+
+  .proyecto, .front, .back {
+    width: 150px;
+    height: 150px;
+  }
+
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+    height: 150px;
+    width: 150px;
+  }
+
+  .front {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    background-size: contain !important;
+    height: 150px;
+    width: 150px;
+  }
+
+  .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    background-size: contain !important;
+    height: 150px;
+    width: 150px;
   }
 }
+  //    .proyecto:nth-child(1) {
+  //      background:  url("../img/port01.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(1):hover {
+  //      background:  url("../img/port01b.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(2) {
+  //      background:  url("../img/port02.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(2):hover {
+  //      background:  url("../img/port02b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
+  //
+  //    .proyecto:nth-child(3) {
+  //      background:  url("../img/port03.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(3):hover {
+  //      background:  url("../img/port03b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
+  //
+  //    .proyecto:nth-child(4) {
+  //      background:  url("../img/port04.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(4):hover {
+  //      background:  url("../img/port04b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
+  //
+  //    .proyecto:nth-child(5) {
+  //      background:  url("../img/port05.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(5):hover {
+  //      background:  url("../img/port05b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
+  //
+  //    .proyecto:nth-child(6) {
+  //      background:  url("../img/port06.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(6):hover {
+  //      background:  url("../img/port06b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
+  //
+  //    .proyecto:nth-child(7) {
+  //      background:  url("../img/port07.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(7):hover {
+  //      background:  url("../img/port07b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
+  //
+  //    .proyecto:nth-child(8) {
+  //      background:  url("../img/port08.png") center center no-repeat;
+  //      background-size: contain;
+  //    }
+  //
+  //    .proyecto:nth-child(8):hover {
+  //      background:  url("../img/port08b.png") center center no-repeat;
+  //      background-size: contain;
+  //      //      transform: scale(1.5,1.5);
+  //    }
 
-#portfolio-background {
-  opacity: 0;
-  transition: all 1s;
-}
 
-.portfolio-background-show {
-  opacity: 1 !important;
-}
+//#portfolio {
+//  width: 100%;
+//  min-height: 400px;
+//  height: auto;
+//  img {
+//    max-width: 100%;
+//    max-height: 100%;
+//  }
+//  background: #E25F1C;
+////  background-size: contain;
+////  display: flex;
+////  flex-wrap: wrap;
+////  justify-content: flex-start;
+////  padding-bottom: 20px;
+//}
+//
+//#portfolio-titulo{
+//  font-size: 110px;
+//  font-family: "Roboto", sans-serif;
+//  font-weight: 300;
+//  color: #ffffff;
+//  margin-right: 80px;
+//  img{
+//    height: 70px;
+//  }
+//
+//}
 
-#ampliar{
-  tspan, text {
-    font-family: "Roboto", sans-serif !important;
-    font-weight: 400 !important;
-  }
-}
+//
+//.portfolio-item{
+//  flex: 1 1 auto;
+//  height: 310px;
+//  padding: 15px;
+////  background-color: blue;
+//}
+//
+//.portfolio-work {
+//  width: 280px;
+//  background-color: rgba(#444444, 1);
+//  height: 300px;
+//  margin: auto;
+////  margin-top: 25px;
+//  transition: all 1s;
+////  margin-left: auto;
+//  overflow: hidden;
+//}
+//
+//.portfolio-work-over {
+//  opacity: 1 !important;
+//  transform: translate(0px, 0px) !important;
+//}
+//
+//#portfolio-thumb {
+//  opacity: 1;
+//  transition: all 1s;
+//}
+//
+//.portfolio-img-over {
+////  position: absolute !important;
+//  transform-origin: 0% 0% !important;
+//  transform: scale(10, 10) !important;
+//  //  background-position:50% 50% !important;
+//  //  background-size:cover !important;
+//  opacity: 0 !important;
+//}
+//
+//#barra_naranja_1_,
+//#ampliar,
+//#triangulo_negro_1_ {
+//  opacity: 0;
+//  transition: all 1s;
+//  transform: translate(0px, -200px);
+//}
+//
+//.barra_naranja_1_-hover,
+//.ampliar-hover {
+//  opacity: 1 !important;
+//  transform: translate(0px, 0px) !important;
+//}
+//
+//#texto_detalles {
+//  tspan {
+//
+//    font-family: Roboto, serif !important;
+//    font-weight: 300 !important;
+//  }
+//
+//}
+//
+//#titulo_prensa_energetica_1_,
+//#texto_detalles_1_,
+//#triangulo_naranja,
+//#linea_naranka {
+//  opacity: 0;
+//  transition: all 1s;
+//  transform: translate(-200px, 0px);
+//  text {
+//
+//    tspan:nth-child(1) {
+//      font-family: Roboto, serif !important;
+//      font-weight: 300;
+//
+//    }
+//    tspan:nth-child(2) {
+//      font-family: Roboto, serif !important;
+//      font-weight: 700;
+//
+//    }
+//  }
+//}
+//
+//#portfolio-background {
+//  opacity: 0;
+//  transition: all 1s;
+//}
+//
+//.portfolio-background-show {
+//  opacity: 1 !important;
+//}
+//
+//#ampliar{
+//  tspan, text {
+//    font-family: "Roboto", sans-serif !important;
+//    font-weight: 400 !important;
+//  }
+//}

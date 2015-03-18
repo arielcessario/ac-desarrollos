@@ -1,98 +1,308 @@
 <div class="content" ng-controller="MainViewCtrl as mainViewCtrl">
-    <div id="home">
+    <div id="home" style="height: {{mainViewCtrl.homeHeight}}">
 
-        <div class="slide" ng-show="mainViewCtrl.slide01">
-            <div id="img01"></div>
-            <div id="text01">Diseños a medida apuntando al futuro</div>
+        <div class="slide" id="img01" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
+             ng-show="mainViewCtrl.slide01">
+            <!--<div id="img01"></div>-->
+            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
             <div id="button01">Portfolio</div>
         </div>
 
-        <div class="slide" ng-show="mainViewCtrl.slide02">
-            <div id="img02"></div>
-            <div id="text02">Diseños a medida apuntando al futuro</div>
+        <div class="slide" id="img02" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
+             ng-show="mainViewCtrl.slide02">
+            <!--<div id="img02"></div>-->
+            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
             <div id="button02">Portfolio</div>
         </div>
+
+        <div class="slide" id="img03" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
+             ng-show="mainViewCtrl.slide03">
+            <!--<div id="img02"></div>-->
+            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
+            <div id="button03">Portfolio</div>
+        </div>
+
+        <div class="slide" id="img04" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
+             ng-show="mainViewCtrl.slide04">
+            <!--<div id="img02"></div>-->
+            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
+            <div id="button04">Portfolio</div>
+        </div>
+
+
         <!--<div id="output"></div>-->
     </div>
     <div id="frase-01">
-        <img src="./img/frase01.jpg" alt=""/>
+        <!--<img src="./img/frase01.jpg" alt=""/>-->
+        <div class="texto-frase">Estarás posicionado en los <span>pimeros rankings</span> gracias a nuestras <span>campañas de adwords</span>
+        </div>
+        <div class="btn-frase">Contacto</div>
     </div>
-    <div id="empresa"></div>
+    <div id="empresa">
+        <div id="empresa-titulo"><img src="./img/rueda.png" alt=""/>Staff</div>
+        <!--<img src="./img/empresa.jpg" alt=""/>-->
+
+
+        <!--<div>-->
+        <ul id="sdt_menu" class="sdt_menu">
+            <li>
+                <a href="">
+                    <img src="img/2.png" alt=""/>
+                    <span class="sdt_active"></span>
+			<span class="sdt_wrap">
+				<span class="sdt_link">Ventas</span>
+				<span class="sdt_descr"><span class="sdt_descr_firt">Juan Pablo</span> Dilello</span>
+			</span>
+                </a>
+
+                <div class="sdt_box">
+                    <a href="">Websites</a>
+                    <a href="">Illustrations</a>
+                    <a href="">Photography</a>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/1.png" alt=""/>
+                    <span class="sdt_active"></span>
+			<span class="sdt_wrap">
+				<span class="sdt_link">Diseño</span>
+				<span class="sdt_descr"><span class="sdt_descr_firt">Diego</span> Yankelevich</span>
+			</span>
+                </a>
+
+                <div class="sdt_box">
+                    <a href="">Websites</a>
+                    <a href="">Illustrations</a>
+                    <a href="">Photography</a>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/1.jpg" alt=""/>
+                    <span class="sdt_active"></span>
+			<span class="sdt_wrap">
+				<span class="sdt_link">Desarrollo</span>
+				<span class="sdt_descr"><span class="sdt_descr_firt">Ariel</span> Cessario</span>
+			</span>
+                </a>
+
+                <div class="sdt_box">
+                    <a href="">Websites</a>
+                    <a href="">Illustrations</a>
+                    <a href="">Photography</a>
+                </div>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/3.png" alt=""/>
+                    <span class="sdt_active"></span>
+			<span class="sdt_wrap">
+				<span class="sdt_link">Consultoria</span>
+				<span class="sdt_descr"><span class="sdt_descr_firt">Javier</span> Zaine</span>
+			</span>
+                </a>
+
+                <div class="sdt_box">
+                    <a href="">Websites</a>
+                    <a href="">Illustrations</a>
+                    <a href="">Photography</a>
+                </div>
+            </li>
+        </ul>
+
+
+        <!--</div>-->
+    </div>
     <div id="frase-02">
-        <img src="./img/frase02.jpg" alt=""/>
+        <!--<img src="./img/frase02.jpg" alt=""/>-->
+        <div class="texto-frase"><span>Potenciamos</span> tus ideas y las transformamos en realidad</div>
+        <div class="btn-frase">Contacto</div>
     </div>
     <div id="portfolio">
-        <div class="portfolio-item">
-            <div class="portfolio-work" id="portofolio-01">
-                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                                text4="Diseño Web"></portfolio-caja>
+
+        <div id="portfolio-titulo">
+            <!--<img src="./img/rueda.png" alt=""/>-->
+            Servicios</div>
+        <div id="portfolio-detalle">
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port01.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port01b.png" height="150" width="150" alt=""/>
+                    <!--<div class="front" style="background:  url('./img/port01.png') center center no-repeat;"></div>-->
+                    <!--<div class="back" style="background:  url('./img/port01b.png') center center no-repeat;"></div>-->
+                </div>
             </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="portfolio-work" id="portofolio-02">
-                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                                text4="Diseño Web"></portfolio-caja>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port02.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port02b.png" height="150" width="150" alt=""/>
+                </div>
             </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="portfolio-work" id="portofolio-03">
-                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                                text4="Diseño Web"></portfolio-caja>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port03.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port03b.png" height="150" width="150" alt=""/>
+                </div>
             </div>
-        </div>
-        <div class="portfolio-item">
-            <div class="portfolio-work" id="portofolio-04">
-                <portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"
-                                text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"
-                                text4="Diseño Web"></portfolio-caja>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port04.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port04b.png" height="150" width="150" alt=""/>
+                </div>
             </div>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port05.svg" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port05b.svg" height="150" width="150" alt=""/>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port06.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port06b.png" height="150" width="150" alt=""/>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port07.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port07b.png" height="150" width="150" alt=""/>
+                </div>
+            </div>
+            <div class="proyecto">
+                <div class="flipper">
+                    <img class="front" src="./img/port08.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port08b.png" height="150" width="150" alt=""/>
+                </div>
+            </div>
+
         </div>
-        <!--<div class="portfolio-item">-->
-            <!--<div class="portfolio-work" id="portofolio-05">-->
-                <!--<portfolio-caja title="Revista" subtitle="Prensa energetica" img="./img/port-01.png"-->
-                                <!--text1="Imagen" text2="Retoque Fotográfico" text3="Diseño Editorial"-->
-                                <!--text4="Diseño Web"></portfolio-caja>-->
-            <!--</div>-->
-        <!--</div>-->
+
+
 
     </div>
+    <div id="frase-03">
+        <!--<img src="./img/frase02.jpg" alt=""/>-->
+        <div class="texto-frase">Estarás posicionado en los primeros rankings gracias a nuestras campañas de adwords
+        </div>
+        <div class="btn-frase">Contacto</div>
+    </div>
+    <div id="clientes">
+        <div id="clientes-titulo">
+            <!--<img src="./img/rueda.png" alt=""/>-->
+            Clientes</div>
+
+        <div class="clientes-grid-container">
+            <div class="clientes-row">
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl01.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl01b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl02.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl02b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl03.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl03b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="clientes-row">
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl04.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl04b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl05.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl05b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl06.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl06b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="clientes-row">
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl07.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl07b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl08.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl08b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+                <div class="cliente">
+                    <div class="flipper">
+                        <img class="front" src="./img/cl09.png" height="150" width="150" alt=""/>
+                        <img class="back" src="./img/cl09b.svg" height="150" width="150" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="contacto">
-        <span class="contacto-top-titulo">Consultanos</span><br/>
-        <span class="contacto-top-subtitulo">sobre tu proyecto!</span>
+        <div id="contacto-titulo">Consultanos</div>
+        <span id="contacto-subtitulo">sobre tu proyecto</span>
+
         <form class="contacto-form" novalidate>
-            <div class="contacto-wrapper"><input placeholder="Nombre:" ng-model="mainViewCtrl.nombre" type="text"/>
-                <img src="img/logo%202.png" alt=""/>
+            <div class="contacto-wrapper"><input placeholder="Nombre" ng-model="mainViewCtrl.nombre" type="text"/>
+                <!--<img src="img/logo%202.png" alt=""/>-->
             </div>
 
-            <div class="contacto-wrapper"><input placeholder="Mail:" ng-model="mainViewCtrl.email" type="text"/>
-                <img src="img/logo%203.png" alt=""/>
+            <div class="contacto-wrapper"><input placeholder="Mail" ng-model="mainViewCtrl.email" type="text"/>
+                <!--<img src="img/logo%203.png" alt=""/>-->
             </div>
-            <div class="contacto-wrapper"><input placeholder="Asunto:" ng-model="mainViewCtrl.asunto" type="text"/>
-                <img src="img/logo%201.png" alt=""/>
+            <div class="contacto-wrapper"><input placeholder="Asunto" ng-model="mainViewCtrl.asunto" type="text"/>
+                <!--<img src="img/logo%201.png" alt=""/>-->
             </div>
             <div class="contacto-wrapper">
-                <textarea ng-model="mainViewCtrl.mensaje" rows="5" placeholder="Escribe aquí tu consulta:" ></textarea>
+                <textarea ng-model="mainViewCtrl.mensaje" rows="5" placeholder="Escribe aquí tu consulta"></textarea>
             </div>
-            <button class="contacto-enviar" ng-click="mainViewCtrl.sendMail()">Enviar</button>
+
 
         </form>
-        <div class="contacto-enviado" ng-show="mainViewCtrl.enviado">Muchas gracias por escribirnos! Su mensaje será contestado a la brevedad. </div>
+        <button class="contacto-enviar" ng-click="mainViewCtrl.sendMail()">Enviar</button>
+        <div class="contacto-enviado" ng-show="mainViewCtrl.enviado">Muchas gracias por escribirnos! Su mensaje será
+            contestado a la brevedad.
+        </div>
 
     </div>
     <div id="footer">
-        <div>Contáctenos:
-            <p>Tel: <span>153111xxxx</span></p>
-            <p>Email: <span>ventas@ac-desarrollos.com</span></p>
-            <p>Web: <span>ac-desarrollos.com</span></p>
+        <div>Contáctenos <br/>
+            <span>ventas@ac-desarrollos.com</span>
+        </div>
+        <div>Teléfono <br/>
+            <span>0113-459-5006</span>
         </div>
         <div class="footer-logo">
+            <div>AC-desarrollos</div>
             <!--<img class="footer-logo" src="./img/logofull.png" alt=""/>-->
         </div>
-        <div>Seguinos:</div>
+        <div>Siguenos
+            <p>#AC-desarrollos</p>
+            <p></p>
+        </div>
+        <div>Web <br/>
+            <span>www.ac-desarrollos.com</span>
+        </div>
     </div>
 
 </div>
+
+
 

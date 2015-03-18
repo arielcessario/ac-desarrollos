@@ -71,15 +71,99 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 9, ../sass/screen.scss */
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 13, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
+.view-container {
+  margin-top: -80px;
+}
+
+/* line 19, ../sass/screen.scss */
 .content {
   height: 2600px;
   max-height: 2600px;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
+#nav-mob {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #000000;
+  transition: all 0.5s;
+  transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 601px) {
+  /* line 25, ../sass/screen.scss */
+  #nav-mob {
+    display: none;
+  }
+}
+/* line 43, ../sass/screen.scss */
+#nav-mob div:nth-child(2) {
+  flex: 1;
+}
+/* line 47, ../sass/screen.scss */
+#nav-mob img {
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+/* line 54, ../sass/screen.scss */
+#nav-mob img:focus {
+  outline: none;
+}
+/* line 58, ../sass/screen.scss */
+#nav-mob #menu-mobile {
+  transition: all 0.5s;
+}
+/* line 62, ../sass/screen.scss */
+#nav-mob #menu-mobile .menu-item-mob {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 0px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* line 76, ../sass/screen.scss */
+.menu-mob-open {
+  z-index: 15;
+  transition: menu .5s;
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  background: #000000;
+}
+/* line 85, ../sass/screen.scss */
+.menu-mob-open .menu-item-mob {
+  font-size: 20px !important;
+}
+
+@keyframes menu {
+  0% {
+    transform: scale(0, 0) !important;
+  }
+  1% {
+    transform: scale(1, 0) !important;
+  }
+  100% {
+    transform: scale(1, 1) !important;
+  }
+}
+/* line 112, ../sass/screen.scss */
 #nav-bar {
   z-index: 20;
   position: fixed;
@@ -92,206 +176,182 @@ html {
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  /* line 112, ../sass/screen.scss */
+  #nav-bar {
+    display: none;
+  }
+}
+/* line 133, ../sass/screen.scss */
+#nav-bar #menu-container {
+  max-width: 800px;
+  transition: all .5s;
+  margin-top: 90px;
+  height: 100px;
+}
+/* line 139, ../sass/screen.scss */
+#nav-bar #menu-container .menu-item {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 20px;
+}
+/* line 151, ../sass/screen.scss */
+#nav-bar #menu-container .menu-middle img {
+  margin-bottom: -30px;
+}
+/* line 156, ../sass/screen.scss */
+#nav-bar #menu-container .menu-item:hover {
+  color: #039FB2;
+}
+/* line 160, ../sass/screen.scss */
+#nav-bar #menu-container .menu-item:focus {
+  outline: none;
+}
+/* line 164, ../sass/screen.scss */
+#nav-bar img {
+  max-width: 50px;
+  max-height: 50px;
+  transition: all .5s;
+}
+/* line 169, ../sass/screen.scss */
+#nav-bar img:focus {
+  outline: none;
 }
 
-/* line 32, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
+.menu-home-mini {
+  margin-top: 40px !important;
+}
+
+/* line 180, ../sass/screen.scss */
+.logo-mini {
+  margin-top: 0px !important;
+}
+
+/* line 186, ../sass/screen.scss */
+.menu-mini {
+  margin-top: 40px !important;
+}
+
+/* line 191, ../sass/screen.scss */
 .nav-bar-mini {
   height: 50px !important;
 }
 
-/* line 36, ../sass/screen.scss */
-.home-hidden {
-  visibility: collapse;
-  transform: scale(10, 10);
-}
-
-/* line 41, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .slide {
-  transform: scale(1, 1);
-  opacity: 1;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .slide.ng-add {
-  transform: scale(1, 1);
+  z-index: 1;
   opacity: 1;
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .slide.ng-hide {
+  z-index: 0;
   transform: scale(10, 10);
   opacity: 0;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 #home {
-  width: 100%;
-  height: 600px !important;
   overflow: hidden;
+  z-index: 3 !important;
+  position: relative;
 }
-/* line 67, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 #home #img01 {
   background: url("../img/background01.jpg") center center no-repeat;
 }
-/* line 70, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 #home #img02 {
   background: url("../img/background02.jpg") center center no-repeat;
 }
-/* line 74, ../sass/screen.scss */
-#home #img01, #home #img02 {
-  z-index: 0;
-  background-size: contain;
-  transition: all 0.5s;
+/* line 256, ../sass/screen.scss */
+#home #img03 {
+  background: url("../img/background01.jpg") center center no-repeat;
 }
-@media (max-width: 800px) {
-  /* line 74, ../sass/screen.scss */
-  #home #img01, #home #img02 {
-    height: calc(1200px / 2);
-    width: 100%;
-  }
+/* line 259, ../sass/screen.scss */
+#home #img04 {
+  background: url("../img/background02.jpg") center center no-repeat;
 }
-@media (min-width: 801px) and (max-width: 1366px) {
-  /* line 74, ../sass/screen.scss */
-  #home #img01, #home #img02 {
-    height: calc(1200px / 1.5);
-    width: 100%;
-  }
-}
-@media (min-width: 1367px) {
-  /* line 74, ../sass/screen.scss */
-  #home #img01, #home #img02 {
-    height: 1200px;
-    width: 100%;
-  }
-}
-/* line 106, ../sass/screen.scss */
-#home #text01, #home #text02 {
-  position: absolute;
-  top: 200px;
-  left: calc(50% - 450px);
-  font-family: "Roboto", sans-serif;
-  font-size: 50px;
-  color: white;
-  font-weight: 700;
-  text-align: center;
-  max-width: 900px;
-}
-/* line 118, ../sass/screen.scss */
-#home #button01, #home #button02 {
-  border: 1px solid white;
-  position: absolute;
-  top: 400px;
-  left: calc(50% - 100px);
-  font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  color: white;
-  padding: 20px;
-  transition: all 1s;
-}
-/* line 130, ../sass/screen.scss */
-#home #button01:hover,
-#home #button02:hover {
-  background-color: rgba(0, 199, 255, 0.5);
-  transform: translate(5px, 5px) scale(1.05);
-  box-shadow: 2px 2px 10px #FFFFFF;
-}
-
-/* line 139, ../sass/screen.scss */
-#empresa {
-  width: 100%;
-  background: black url("../img/empresa.jpg") center center no-repeat;
-  background-size: contain;
-}
-
-/* line 149, ../sass/screen.scss */
-#frase-02, #frase-01 {
-  width: 100%;
-  height: auto;
-}
-/* line 152, ../sass/screen.scss */
-#frase-02 img, #frase-01 img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-/* line 159, ../sass/screen.scss */
-#contacto {
-  width: 100%;
-  height: 400px !important;
-  background: #000000 url("../img/contacto.jpg") center center no-repeat;
-  background-size: contain;
+/* line 263, ../sass/screen.scss */
+#home #img01, #home #img02, #home #img03, #home #img04 {
   overflow: hidden;
-  font-family: "Roboto", sans-serif;
-}
-/* line 171, ../sass/screen.scss */
-#contacto .contacto-top-titulo {
-  font-size: 35px;
-  color: #ffffff;
-  font-weight: 300;
-  margin-left: 10px;
-}
-/* line 177, ../sass/screen.scss */
-#contacto .contacto-top-subtitulo {
-  font-size: 20px;
-  color: #00c7ff;
-  font-weight: 700;
-  margin-left: 10px;
-}
-
-/* line 185, ../sass/screen.scss */
-.contacto-form {
-  position: relative;
-  bottom: 0px;
-  left: calc(50% - 250px);
-  width: 600px;
-}
-/* line 190, ../sass/screen.scss */
-.contacto-form .contacto-enviar {
-  background: #00c7ff !important;
-  color: #ffffff;
-  border: 0px solid;
-  margin-left: 445px;
-  width: 60px;
-}
-/* line 199, ../sass/screen.scss */
-.contacto-form .contacto-wrapper input, .contacto-form .contacto-wrapper textarea {
-  margin-bottom: 10px;
-  width: 500px;
-}
-/* line 203, ../sass/screen.scss */
-.contacto-form .contacto-wrapper img {
-  height: 20px;
-  position: relative;
-  top: 4px;
-  left: -50px;
-}
-
-/* line 213, ../sass/screen.scss */
-.contacto-enviado {
-  position: relative;
-  white-space: nowrap;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 35px;
-  color: #ffffff;
-  font-weight: 700;
+  position: absolute;
+  z-index: -1;
+  transform-origin: 50% 50% 0 !important;
+  background-size: contain;
   transition: all 0.5s;
 }
 
-/* line 227, ../sass/screen.scss */
-.contacto-enviado.ng-add {
-  transform: scale(1, 1);
-  opacity: 1;
+/* line 347, ../sass/screen.scss */
+#frase-02, #frase-01, #frase-03 {
+  z-index: 10;
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  color: #039FB2;
+  font-weight: 300;
+}
+/* line 363, ../sass/screen.scss */
+#frase-02 .texto-frase, #frase-01 .texto-frase, #frase-03 .texto-frase {
+  font-family: Roboto, serif;
+  font-weight: 100;
+  text-align: center;
+  max-width: 800px;
+  margin: 30px;
+}
+@media (max-width: 400px) {
+  /* line 363, ../sass/screen.scss */
+  #frase-02 .texto-frase, #frase-01 .texto-frase, #frase-03 .texto-frase {
+    font-size: 30px;
+  }
+}
+@media (min-width: 401px) {
+  /* line 363, ../sass/screen.scss */
+  #frase-02 .texto-frase, #frase-01 .texto-frase, #frase-03 .texto-frase {
+    font-size: 40px;
+  }
+}
+/* line 376, ../sass/screen.scss */
+#frase-02 .texto-frase span, #frase-01 .texto-frase span, #frase-03 .texto-frase span {
+  font-weight: 400;
+}
+/* line 380, ../sass/screen.scss */
+#frase-02 .btn-frase, #frase-01 .btn-frase, #frase-03 .btn-frase {
+  border: 1px solid #039FB2;
+  background: #039FB2;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 20px;
+  transition: all .4s;
+  cursor: pointer;
+}
+/* line 390, ../sass/screen.scss */
+#frase-02 .btn-frase:hover, #frase-01 .btn-frase:hover, #frase-03 .btn-frase:hover {
+  border: 1px solid #039FB2;
+  background: #ffffff;
+  color: #039FB2;
 }
 
-/* line 232, ../sass/screen.scss */
-.contacto-enviado.ng-hide {
-  opacity: 0;
-  transform: scale(10, 10);
-}
-
-/* line 238, ../sass/screen.scss */
+/* line 398, ../sass/screen.scss */
 .screen-shadow {
   position: fixed;
   top: 0;
@@ -302,7 +362,7 @@ html {
   z-index: 14;
 }
 
-/* line 248, ../sass/screen.scss */
+/* line 408, ../sass/screen.scss */
 .btn-close {
   font-size: 2em;
   color: white;
@@ -312,8 +372,39 @@ html {
   z-index: 16;
 }
 
-/* line 258, ../sass/screen.scss */
+/* line 418, ../sass/screen.scss */
 .btn-hidden {
   font-size: 0px;
   transition: all 1s;
+}
+
+/* line 423, ../sass/screen.scss */
+.texto-slide {
+  width: 100%;
+  position: absolute;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  /* line 423, ../sass/screen.scss */
+  .texto-slide {
+    top: 150px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+  /* line 423, ../sass/screen.scss */
+  .texto-slide {
+    top: 200px;
+    font-size: 35px;
+  }
+}
+@media (min-width: 801px) {
+  /* line 423, ../sass/screen.scss */
+  .texto-slide {
+    top: 300px;
+    font-size: 50px;
+  }
 }

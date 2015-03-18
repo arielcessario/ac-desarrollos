@@ -6,37 +6,121 @@
 @import "compass";
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
 
-
-#footer{
+#footer {
   width: 100%;
   background-size: contain;
-  background-color: #ff7d00;
-  height: 150px;
+  background-color: #000000;
+  min-height: 150px;
   display: flex;
-  flex-wrap: nowrap;
-  div{
+  @media (max-width: 700px) {
+  flex-flow: column;
+    align-items: center !important;
+  }
+
+  @media (min-width: 701px) {
+    flex-wrap: nowrap;
+
+  }
+
+
+  div {
     padding-left: 30px;
     padding-top: 15px;
     flex: 1;
     font-family: "Roboto", sans-serif;
-    color: #ffffff;
+    color: #039FB2;
     font-size: 20px;
-    font-weight: 700;
-    p{
-
-      margin-top: 5px;
-      font-weight: 700;
-      font-size: 20px;
-      span{
-        white-space: nowrap;
-        font-size: 20px;
-        font-weight: 300;
-      }
+    font-weight: 400;
+    @media (max-width: 700px) {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
+
+    @media (min-width: 701px) {
+
+    }
+
+    span{
+      color: #ffffff;
+      font-weight: 100;
+      white-space: nowrap;
+//      font-size: 10px;
+
+
+
+    }
+    p {
+
+      color: #ffffff;
+      margin-top: 5px;
+      font-weight: 100;
+      font-size: 20px;
+      padding-left: 20px;
+    }
+    p:before {
+      background-size: 24px 24px !important;
+      height: 30px;
+      width: 30px;
+      content: '';
+      position: absolute; // Si no está en absoluto no funciona el before
+      margin-top: -5px;
+      margin-left: -30px;
+//      top: 0;
+    }
+    p:nth-child(1):before {
+      background: url("../img/face.svg") center center no-repeat;
+    }
+    p:nth-child(2):before {
+      background: url("../img/twiter.svg") center center no-repeat;
+    }
+
   }
 
-  .footer-logo{
-    background: url(../img/logofull.png) center center no-repeat;
-    background-size: 50%;
+  .footer-logo {
+    background: url(../img/logogris.png) center 15px no-repeat;
+
+    @media (max-width: 700px) {
+//      margin-left: 40%;
+      background-position: 65%;
+    }
+
+    @media (min-width: 701px) {
+      padding-left: 0px;
+      padding-top: 0px;
+
+    }
+
+
+    @media (max-width: 800px) {
+      background-size: 30%;
+    }
+
+    @media (min-width: 801px) and (max-width: 1366px) {
+      background-size: 30%;
+    }
+
+    @media (min-width: 1367px) {
+      background-size: 10%;
+    }
+
+    div{
+      text-align: center;
+      width: 100% !important;
+      padding-left: 0px;
+      color: #ffffff;
+      @media (max-width: 700px) {
+        padding-top: 45%;
+
+      }
+
+      @media (min-width: 701px) {
+        padding-top: 35%;
+
+      }
+
+
+    }
+
   }
 }

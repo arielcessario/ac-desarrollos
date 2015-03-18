@@ -68,122 +68,122 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 9, ../sass/portfolio.scss */
-#portfolio {
+/* line 9, ../sass/clientes.scss */
+#clientes {
   width: 100%;
   height: auto;
-  min-height: 650px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  background-color: #E25F1C;
+  background-color: #039FB2;
 }
-/* line 21, ../sass/portfolio.scss */
-#portfolio img {
+/* line 20, ../sass/clientes.scss */
+#clientes img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 26, ../sass/portfolio.scss */
-#portfolio #portfolio-titulo {
+/* line 25, ../sass/clientes.scss */
+#clientes #clientes-titulo {
+  margin-bottom: 50px;
+  margin-top: 70px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #ffffff;
-  margin-bottom: 70px;
 }
 @media (max-width: 400px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
+  /* line 25, ../sass/clientes.scss */
+  #clientes #clientes-titulo {
     font-size: 80px;
     margin-right: 0px;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 401px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
+  /* line 25, ../sass/clientes.scss */
+  #clientes #clientes-titulo {
     font-size: 110px;
   }
 }
 @media (max-width: 400px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
+  /* line 44, ../sass/clientes.scss */
+  #clientes #clientes-titulo img {
     height: 0px;
   }
 }
 @media (min-width: 401px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
+  /* line 44, ../sass/clientes.scss */
+  #clientes #clientes-titulo img {
     height: 70px;
   }
 }
-/* line 56, ../sass/portfolio.scss */
-#portfolio #portfolio-detalle {
+
+/* line 62, ../sass/clientes.scss */
+#clientes {
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
-@media (max-width: 649px) {
-  /* line 56, ../sass/portfolio.scss */
-  #portfolio #portfolio-detalle {
-    max-width: 650px;
-    flex-direction: column;
+/* line 66, ../sass/clientes.scss */
+#clientes .clientes-grid-container {
+  margin-bottom: 50px;
+}
+@media (max-width: 400px) {
+  /* line 66, ../sass/clientes.scss */
+  #clientes .clientes-grid-container {
+    transform: scale(0.7, 0.7) !important;
   }
 }
-@media (min-width: 650px) {
-  /* line 56, ../sass/portfolio.scss */
-  #portfolio #portfolio-detalle {
-    width: 650px;
-    flex-direction: row;
-  }
+/* line 78, ../sass/clientes.scss */
+#clientes .clientes-grid-container .clientes-row {
+  width: 500px;
+  display: flex;
+  flex-flow: row;
 }
-/* line 74, ../sass/portfolio.scss */
-#portfolio .proyecto {
+/* line 85, ../sass/clientes.scss */
+#clientes .clientes-grid-container .cliente {
   width: 150px;
   height: 150px;
   transition: all 0.5s;
   margin: 5px;
   background-size: contain;
 }
-/* line 85, ../sass/portfolio.scss */
-#portfolio .proyecto:hover .flipper, #portfolio .proyecto.hover .flipper {
-  transform: rotateY(180deg);
+/* line 96, ../sass/clientes.scss */
+#clientes .clientes-grid-container .cliente:hover .flipper, #clientes .clientes-grid-container .cliente.hover .flipper {
+  transform: rotateX(180deg);
 }
-/* line 89, ../sass/portfolio.scss */
-#portfolio .proyecto, #portfolio .front, #portfolio .back {
+/* line 100, ../sass/clientes.scss */
+#clientes .clientes-grid-container .cliente, #clientes .clientes-grid-container .front, #clientes .clientes-grid-container .back {
   width: 150px;
   height: 150px;
 }
-/* line 94, ../sass/portfolio.scss */
-#portfolio .flipper {
+/* line 105, ../sass/clientes.scss */
+#clientes .clientes-grid-container .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
   position: relative;
   height: 150px;
   width: 150px;
 }
-/* line 103, ../sass/portfolio.scss */
-#portfolio .front {
+/* line 114, ../sass/clientes.scss */
+#clientes .clientes-grid-container .front {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   /* for firefox 31 */
-  transform: rotateY(0deg);
+  transform: rotateX(0deg);
   background-size: contain !important;
   height: 150px;
   width: 150px;
 }
-/* line 116, ../sass/portfolio.scss */
-#portfolio .back {
+/* line 127, ../sass/clientes.scss */
+#clientes .clientes-grid-container .back {
   backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
   background-size: contain !important;
   height: 150px;
   width: 150px;

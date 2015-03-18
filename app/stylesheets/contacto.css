@@ -68,123 +68,130 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 9, ../sass/portfolio.scss */
-#portfolio {
+/* line 36, ../sass/contacto.scss */
+#contacto {
   width: 100%;
   height: auto;
-  min-height: 650px;
+  min-height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #E25F1C;
+  background-color: #ffffff;
 }
-/* line 21, ../sass/portfolio.scss */
-#portfolio img {
+/* line 48, ../sass/contacto.scss */
+#contacto img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 26, ../sass/portfolio.scss */
-#portfolio #portfolio-titulo {
+/* line 53, ../sass/contacto.scss */
+#contacto #contacto-titulo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #039FB2;
+}
+@media (max-width: 400px) {
+  /* line 53, ../sass/contacto.scss */
+  #contacto #contacto-titulo {
+    font-size: 50px;
+  }
+}
+@media (min-width: 401px) {
+  /* line 53, ../sass/contacto.scss */
+  #contacto #contacto-titulo {
+    font-size: 70px;
+  }
+}
+/* line 68, ../sass/contacto.scss */
+#contacto #contacto-subtitulo {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  color: #ffffff;
-  margin-bottom: 70px;
+  color: #E25F1C;
 }
 @media (max-width: 400px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
-    font-size: 80px;
-    margin-right: 0px;
-    margin-bottom: 100px;
+  /* line 68, ../sass/contacto.scss */
+  #contacto #contacto-subtitulo {
+    font-size: 30px;
   }
 }
 @media (min-width: 401px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
-    font-size: 110px;
+  /* line 68, ../sass/contacto.scss */
+  #contacto #contacto-subtitulo {
+    font-size: 60px;
   }
 }
-@media (max-width: 400px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
-    height: 0px;
+
+@media (max-width: 599px) {
+  /* line 87, ../sass/contacto.scss */
+  .contacto-form {
+    max-width: 600px;
   }
 }
-@media (min-width: 401px) {
-  /* line 26, ../sass/portfolio.scss */
-  #portfolio #portfolio-titulo {
-    height: 70px;
+@media (min-width: 600px) {
+  /* line 87, ../sass/contacto.scss */
+  .contacto-form {
+    width: 600px;
   }
 }
-/* line 56, ../sass/portfolio.scss */
-#portfolio #portfolio-detalle {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-@media (max-width: 649px) {
-  /* line 56, ../sass/portfolio.scss */
-  #portfolio #portfolio-detalle {
-    max-width: 650px;
-    flex-direction: column;
-  }
-}
-@media (min-width: 650px) {
-  /* line 56, ../sass/portfolio.scss */
-  #portfolio #portfolio-detalle {
-    width: 650px;
-    flex-direction: row;
-  }
-}
-/* line 74, ../sass/portfolio.scss */
-#portfolio .proyecto {
-  width: 150px;
-  height: 150px;
-  transition: all 0.5s;
+/* line 102, ../sass/contacto.scss */
+.contacto-form .contacto-wrapper input, .contacto-form .contacto-wrapper textarea {
+  border: 2px solid #039FB2;
+  padding: 5px;
   margin: 5px;
-  background-size: contain;
 }
-/* line 85, ../sass/portfolio.scss */
-#portfolio .proyecto:hover .flipper, #portfolio .proyecto.hover .flipper {
-  transform: rotateY(180deg);
+@media (max-width: 599px) {
+  /* line 102, ../sass/contacto.scss */
+  .contacto-form .contacto-wrapper input, .contacto-form .contacto-wrapper textarea {
+    max-width: 600px;
+  }
 }
-/* line 89, ../sass/portfolio.scss */
-#portfolio .proyecto, #portfolio .front, #portfolio .back {
-  width: 150px;
-  height: 150px;
+@media (min-width: 600px) {
+  /* line 102, ../sass/contacto.scss */
+  .contacto-form .contacto-wrapper input, .contacto-form .contacto-wrapper textarea {
+    width: 600px;
+  }
 }
-/* line 94, ../sass/portfolio.scss */
-#portfolio .flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
+
+/* line 119, ../sass/contacto.scss */
+.contacto-enviar {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  border: 1px solid #039FB2;
+  background: #039FB2;
+  color: #ffffff;
+  padding: 15px;
+  font-size: 20px;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+/* line 148, ../sass/contacto.scss */
+.contacto-enviar:hover {
+  border: 1px solid #039FB2;
+  background: #ffffff;
+  color: #039FB2;
+}
+
+/* line 155, ../sass/contacto.scss */
+.contacto-enviado {
   position: relative;
-  height: 150px;
-  width: 150px;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 35px;
+  color: #E25F1C;
+  font-weight: 700;
+  transition: all 0.5s;
 }
-/* line 103, ../sass/portfolio.scss */
-#portfolio .front {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-  background-size: contain !important;
-  height: 150px;
-  width: 150px;
+
+/* line 169, ../sass/contacto.scss */
+.contacto-enviado.ng-add {
+  transform: scale(1, 1);
+  opacity: 1;
 }
-/* line 116, ../sass/portfolio.scss */
-#portfolio .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
-  background-size: contain !important;
-  height: 150px;
-  width: 150px;
+
+/* line 174, ../sass/contacto.scss */
+.contacto-enviado.ng-hide {
+  opacity: 0;
+  transform: scale(10, 10);
 }

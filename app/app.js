@@ -6,6 +6,7 @@ angular.module('ac', [
     'ngTouch',
     'ngAnimate',
     'ngAria',
+    'duScroll',
     'ac.mainView',
     'ac.cajaPortDir'
 ]).
@@ -17,23 +18,29 @@ angular.module('ac', [
     .controller('MainController', MainController);
 
 
-MainController.$inject = ['$scope', '$location'];
-function MainController($scope, $location) {
+MainController.$inject = ['$scope', '$location','$document'];
+function MainController($scope, $location,$document) {
     var vm = this;
-    ////vm.isScrolled = false;
-    //vm.entrar = entrar;
-    //vm.moved = false;
-    //vm.goToAnchor = goToAnchor;
-    //
-    //function entrar() {
-    //    $scope.moved = !$scope.moved;
-    //}
-    //
-    //function goToAnchor(id) {
-    //    $location.hash(id);
-    //}
-    //
-    ////console.log($scope.isScrolled);
+
+    vm.openMenu = openMenu;
+    vm.goToAnchor = goToAnchor;
+    vm.open = false;
+
+    function openMenu(){
+        vm.open = !vm.open;
+        console.log(vm.open);
+    }
+
+    function goToAnchor(id){
+        var duration = 1000;
+        var offset = 30; //pixels; adjust for floating menu, context etc
+        //Scroll to #some-id with 30 px "padding"
+        //Note: Use this in a directive, not with document.getElementById
+        var someElement = angular.element(document.getElementById(id));
+        $document.scrollToElement(someElement, offset, duration);
+
+    }
+
 }
 
 function scroll($window) {

@@ -76,35 +76,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   min-height: 150px;
   display: flex;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   /* line 9, ../sass/footer.scss */
   #footer {
     flex-flow: column;
     align-items: center !important;
   }
 }
-@media (min-width: 701px) {
+@media (min-width: 801px) {
   /* line 9, ../sass/footer.scss */
   #footer {
     flex-wrap: nowrap;
   }
 }
-/* line 26, ../sass/footer.scss */
+/* line 25, ../sass/footer.scss */
 #footer div {
   padding-left: 30px;
   padding-top: 15px;
   flex: 1;
   font-family: "Roboto", sans-serif;
   color: #039FB2;
-  font-size: 20px;
   font-weight: 400;
 }
-@media (max-width: 700px) {
-  /* line 26, ../sass/footer.scss */
+@media (max-width: 810px) {
+  /* line 25, ../sass/footer.scss */
   #footer div {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 30px;
+  }
+}
+@media (min-width: 811px) {
+  /* line 25, ../sass/footer.scss */
+  #footer div {
+    font-size: 20px;
   }
 }
 /* line 44, ../sass/footer.scss */
@@ -112,16 +118,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #ffffff;
   font-weight: 100;
   white-space: nowrap;
+  font-size: 15px;
 }
-/* line 53, ../sass/footer.scss */
+/* line 52, ../sass/footer.scss */
 #footer div p {
   color: #ffffff;
   margin-top: 5px;
   font-weight: 100;
-  font-size: 20px;
+  font-size: 15px;
   padding-left: 20px;
 }
-/* line 61, ../sass/footer.scss */
+/* line 60, ../sass/footer.scss */
 #footer div p:before {
   background-size: 24px 24px !important;
   height: 30px;
@@ -131,50 +138,50 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-top: -5px;
   margin-left: -30px;
 }
-/* line 71, ../sass/footer.scss */
+/* line 70, ../sass/footer.scss */
 #footer div p:nth-child(1):before {
   background: url("../img/face.svg") center center no-repeat;
 }
-/* line 74, ../sass/footer.scss */
+/* line 73, ../sass/footer.scss */
 #footer div p:nth-child(2):before {
   background: url("../img/twiter.svg") center center no-repeat;
 }
-/* line 80, ../sass/footer.scss */
+/* line 79, ../sass/footer.scss */
 #footer .footer-logo {
   background: url(../img/logogris.png) center 15px no-repeat;
 }
 @media (max-width: 700px) {
-  /* line 80, ../sass/footer.scss */
+  /* line 79, ../sass/footer.scss */
   #footer .footer-logo {
     background-position: 65%;
   }
 }
 @media (min-width: 701px) {
-  /* line 80, ../sass/footer.scss */
+  /* line 79, ../sass/footer.scss */
   #footer .footer-logo {
     padding-left: 0px;
     padding-top: 0px;
   }
 }
 @media (max-width: 800px) {
-  /* line 80, ../sass/footer.scss */
+  /* line 79, ../sass/footer.scss */
   #footer .footer-logo {
     background-size: 30%;
   }
 }
 @media (min-width: 801px) and (max-width: 1366px) {
-  /* line 80, ../sass/footer.scss */
+  /* line 79, ../sass/footer.scss */
   #footer .footer-logo {
     background-size: 30%;
   }
 }
 @media (min-width: 1367px) {
-  /* line 80, ../sass/footer.scss */
+  /* line 79, ../sass/footer.scss */
   #footer .footer-logo {
     background-size: 10%;
   }
 }
-/* line 107, ../sass/footer.scss */
+/* line 105, ../sass/footer.scss */
 #footer .footer-logo div {
   text-align: center;
   width: 100% !important;
@@ -182,13 +189,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #ffffff;
 }
 @media (max-width: 700px) {
-  /* line 107, ../sass/footer.scss */
+  /* line 105, ../sass/footer.scss */
   #footer .footer-logo div {
     padding-top: 45%;
   }
 }
 @media (min-width: 701px) {
-  /* line 107, ../sass/footer.scss */
+  /* line 105, ../sass/footer.scss */
   #footer .footer-logo div {
     padding-top: 35%;
   }

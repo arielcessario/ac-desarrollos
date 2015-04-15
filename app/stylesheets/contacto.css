@@ -156,6 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .contacto-enviar {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  text-align: center;
   border: 1px solid #039FB2;
   background: #039FB2;
   color: #ffffff;
@@ -163,16 +164,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-size: 20px;
   transition: all .4s;
   cursor: pointer;
+  height: 18px;
+  width: 74px;
 }
 
-/* line 148, ../sass/contacto.scss */
+/* line 159, ../sass/contacto.scss */
 .contacto-enviar:hover {
   border: 1px solid #039FB2;
   background: #ffffff;
   color: #039FB2;
 }
 
-/* line 155, ../sass/contacto.scss */
+/* line 166, ../sass/contacto.scss */
 .contacto-enviado {
   position: relative;
   white-space: nowrap;
@@ -184,13 +187,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.5s;
 }
 
-/* line 169, ../sass/contacto.scss */
+/* line 180, ../sass/contacto.scss */
 .contacto-enviado.ng-add {
   transform: scale(1, 1);
   opacity: 1;
 }
 
-/* line 174, ../sass/contacto.scss */
+/* line 185, ../sass/contacto.scss */
 .contacto-enviado.ng-hide {
   opacity: 0;
   transform: scale(10, 10);

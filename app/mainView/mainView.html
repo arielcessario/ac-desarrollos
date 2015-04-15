@@ -11,21 +11,21 @@
         <div class="slide" id="img02" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
              ng-show="mainViewCtrl.slide02">
             <!--<div id="img02"></div>-->
-            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
+            <div class="texto-slide">Diseño es donde la ciencia y el arte llegan a un punto de equilibrio</div>
             <div id="button02">Portfolio</div>
         </div>
 
         <div class="slide" id="img03" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
              ng-show="mainViewCtrl.slide03">
             <!--<div id="img02"></div>-->
-            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
+            <div class="texto-slide">El diseño es la aplicación del intento, lo contrario del evento fortuito, y un antídoto para el accidente.</div>
             <div id="button03">Portfolio</div>
         </div>
 
         <div class="slide" id="img04" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
              ng-show="mainViewCtrl.slide04">
             <!--<div id="img02"></div>-->
-            <div class="texto-slide">Diseños a medida apuntando al futuro</div>
+            <div class="texto-slide">El diseño es inteligencia hecha visible.</div>
             <div id="button04">Portfolio</div>
         </div>
 
@@ -34,9 +34,10 @@
     </div>
     <div id="frase-01">
         <!--<img src="./img/frase01.jpg" alt=""/>-->
-        <div class="texto-frase">Estarás posicionado en los <span>pimeros rankings</span> gracias a nuestras <span>campañas de adwords</span>
+        <div class="texto-frase">
+            El <span>buen diseño</span> es obvio. El <span>diseño genial</span> es transparente.
         </div>
-        <div class="btn-frase">Contacto</div>
+        <div class="btn-frase" ng-click="mainCtrl.goToAnchor('contacto')">Contacto</div>
     </div>
     <div id="empresa">
         <div id="empresa-titulo"><img src="./img/rueda.png" alt=""/>Staff</div>
@@ -113,17 +114,19 @@
 
 
         <!--</div>-->
+
     </div>
     <div id="frase-02">
         <!--<img src="./img/frase02.jpg" alt=""/>-->
         <div class="texto-frase"><span>Potenciamos</span> tus ideas y las transformamos en realidad</div>
-        <div class="btn-frase">Contacto</div>
+        <div class="btn-frase" ng-click="mainCtrl.goToAnchor('contacto')">Contacto</div>
     </div>
     <div id="portfolio">
 
         <div id="portfolio-titulo">
             <!--<img src="./img/rueda.png" alt=""/>-->
-            Servicios</div>
+            Servicios
+        </div>
         <div id="portfolio-detalle">
             <div class="proyecto">
                 <div class="flipper">
@@ -153,8 +156,8 @@
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port05.svg" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port05b.svg" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port05.png" height="150" width="150" alt=""/>
+                    <img class="back" src="./img/port05b.png" height="150" width="150" alt=""/>
                 </div>
             </div>
             <div class="proyecto">
@@ -179,18 +182,19 @@
         </div>
 
 
-
     </div>
     <div id="frase-03">
         <!--<img src="./img/frase02.jpg" alt=""/>-->
-        <div class="texto-frase">Estarás posicionado en los primeros rankings gracias a nuestras campañas de adwords
+        <div class="texto-frase">Estarás posicionado en los <span>pimeros rankings</span> gracias a nuestras <span>campañas de adwords</span>
+
         </div>
-        <div class="btn-frase">Contacto</div>
+        <div class="btn-frase" ng-click="mainCtrl.goToAnchor('contacto')">Contacto</div>
     </div>
     <div id="clientes">
         <div id="clientes-titulo">
             <!--<img src="./img/rueda.png" alt=""/>-->
-            Clientes</div>
+            Clientes
+        </div>
 
         <div class="clientes-grid-container">
             <div class="clientes-row">
@@ -254,6 +258,18 @@
                 </div>
             </div>
         </div>
+        <div style="font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        max-width: 60%;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 25px;
+        color:#ffffff;
+        text-align: center">
+            Somos una empresa joven y dinámica, donde nuestra fuerza de trabajo, proactividad e ideas obedecen a estas mismas cualidades, además de estar pensadas y apuntadas a un gran espectro de consumidores en la web, sin desviar el foco de lo que específicamente necesita su empresa o emprendimiento como estrategia de posicionamiento.
+            <br/><br/>
+            Contamos con basta experiencia en el rubro, trabajando como agentes internos o externos de distintas empresas realizando y programando aplicaciones para celulares con sistema operativo android, diseño web, marketing, publicidad on line y posicionamiento en motores de búsqueda en internet.
+        </div>
     </div>
     <div id="contacto">
         <div id="contacto-titulo">Consultanos</div>
@@ -276,7 +292,10 @@
 
 
         </form>
-        <button class="contacto-enviar" ng-click="mainViewCtrl.sendMail()">Enviar</button>
+        <div class="contacto-enviar"
+             onClick="ga('send', 'event', { eventCategory: 'Contacto', eventAction: 'Pedido de informacion', eventLabel: 'Formulario de contaco'});"
+             id="btn-contacto-enviar" ng-click="mainViewCtrl.sendMail()">Enviar
+        </div>
         <div class="contacto-enviado" ng-show="mainViewCtrl.enviado">Muchas gracias por escribirnos! Su mensaje será
             contestado a la brevedad.
         </div>
@@ -295,6 +314,7 @@
         </div>
         <div>Siguenos
             <p>#AC-desarrollos</p>
+
             <p></p>
         </div>
         <div>Web <br/>

@@ -343,15 +343,17 @@ html {
   font-size: 20px;
   transition: all .4s;
   cursor: pointer;
+  height: 24px;
+  width: 80px;
 }
-/* line 390, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 #frase-02 .btn-frase:hover, #frase-01 .btn-frase:hover, #frase-03 .btn-frase:hover {
   border: 1px solid #039FB2;
   background: #ffffff;
   color: #039FB2;
 }
 
-/* line 398, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 .screen-shadow {
   position: fixed;
   top: 0;
@@ -362,7 +364,7 @@ html {
   z-index: 14;
 }
 
-/* line 408, ../sass/screen.scss */
+/* line 410, ../sass/screen.scss */
 .btn-close {
   font-size: 2em;
   color: white;
@@ -372,39 +374,40 @@ html {
   z-index: 16;
 }
 
-/* line 418, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 .btn-hidden {
   font-size: 0px;
   transition: all 1s;
 }
 
-/* line 423, ../sass/screen.scss */
+/* line 425, ../sass/screen.scss */
 .texto-slide {
   width: 100%;
   position: absolute;
+  text-transform: uppercase;
+  font-weight: 100;
   font-family: "Roboto", sans-serif;
   color: white;
-  font-weight: 700;
   text-align: center;
 }
 @media (max-width: 600px) {
-  /* line 423, ../sass/screen.scss */
+  /* line 425, ../sass/screen.scss */
   .texto-slide {
-    top: 150px;
+    top: 180px;
     font-size: 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 800px) {
-  /* line 423, ../sass/screen.scss */
+  /* line 425, ../sass/screen.scss */
   .texto-slide {
-    top: 200px;
+    top: 220px;
     font-size: 35px;
   }
 }
 @media (min-width: 801px) {
-  /* line 423, ../sass/screen.scss */
+  /* line 425, ../sass/screen.scss */
   .texto-slide {
-    top: 300px;
+    top: 350px;
     font-size: 50px;
   }
 }

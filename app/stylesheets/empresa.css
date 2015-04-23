@@ -254,7 +254,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   float: left;
   clear: both;
   line-height: 30px;
-  color: #0B75AF;
+  /*color: #0B75AF;*/
+    color: #fff;
+    cursor: default;
 }
 /* line 192, ../sass/empresa.scss */
 #empresa ul.sdt_menu li div.sdt_box a:first-child {

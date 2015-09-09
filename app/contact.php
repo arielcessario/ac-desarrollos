@@ -7,17 +7,22 @@ $decoded = json_decode($data);
 sendMail($decoded->email, $decoded->nombre, $decoded->mensaje, $decoded->asunto);
 
 function sendMail($email, $nombre, $mensaje, $asunto){
+
+
+
+
+
     $mail = new PHPMailer;
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'mail.ac-desarrollos.com';  // Specify main and backup SMTP servers
+    $mail->Host = 'gator4184.hostgator.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = 'ventas@ac-desarrollos.com';                 // SMTP username
     $mail->Password = 'ventas';                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 25;
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465;
 
-    $mail->From = 'from@example.com';
-    $mail->FromName = 'Mailer';
+    $mail->From = $email;
+    $mail->FromName = $nombre;
     $mail->addAddress('arielcessario@gmail.com');     // Add a recipient
     $mail->addAddress('juan.dilello@gmail.com');               // Name is optional
     $mail->addAddress('diegoyankelevich@gmail.com');               // Name is optional

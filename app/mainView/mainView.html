@@ -1,34 +1,66 @@
 <div class="content" ng-controller="MainViewCtrl as mainViewCtrl">
-    <div id="home" style="height: {{mainViewCtrl.homeHeight}}">
+    <div id="home" style="margin-top:150px;height: {{mainViewCtrl.homeHeight}}">
 
-        <div class="slide" id="img01" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
-             ng-show="mainViewCtrl.slide01">
-            <!--<div id="img01"></div>-->
-            <div class="texto-slide">"Diseños a medida <br/><span>apuntando al futuro</span>"</div>
-            <div id="button01">Portfolio</div>
-        </div>
+        <iframe id="ytplayer" class="slide"
+                style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
+                src="http://www.youtube.com/embed/E7IpDi5yD8A?enablejsapi=1&loop=1&autoplay=1&autohide=1&playlist=E7IpDi5yD8A"
+                >
+        </iframe>
 
-        <div class="slide" id="img02" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
-             ng-show="mainViewCtrl.slide02">
-            <!--<div id="img02"></div>-->
-            <div class="texto-slide">"Diseño es donde <span>la ciencia y el arte</span> <br/> llegan a un punto de equilibrio"</div>
-            <div id="button02">Portfolio</div>
-        </div>
 
-        <div class="slide" id="img03" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
-             ng-show="mainViewCtrl.slide03">
-            <!--<div id="img02"></div>-->
-            <div class="texto-slide">"El diseño es la <span>aplicación</span> del intento, <br/> lo contrario del <span>evento</span> fortuito,
-                <br/> y un <span>antídoto</span> para el accidente"</div>
-            <div id="button03">Portfolio</div>
-        </div>
+        <script>
 
-        <div class="slide" id="img04" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"
-             ng-show="mainViewCtrl.slide04">
-            <!--<div id="img02"></div>-->
-            <div class="texto-slide">"El diseño es inteligencia <br/><span>hecha visible</span>"</div>
-            <div id="button04">Portfolio</div>
-        </div>
+            var tag = document.createElement('script');
+
+            tag.src = "//www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('ytplayer', {
+                    events: {
+                        'onReady': onPlayerReady
+                    }
+                });
+            }
+
+            function onPlayerReady(event) {
+                player.mute();
+                player.playVideo();
+            }
+
+        </script>
+
+        <!--<div class="slide" id="img01" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"-->
+        <!--ng-show="mainViewCtrl.slide01">-->
+        <!--&lt;!&ndash;<div id="img01"></div>&ndash;&gt;-->
+        <!--<div class="texto-slide">"Diseños a medida <br/><span>apuntando al futuro</span>"</div>-->
+        <!--<div id="button01">Portfolio</div>-->
+        <!--</div>-->
+
+        <!--<div class="slide" id="img02" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"-->
+        <!--ng-show="mainViewCtrl.slide02">-->
+        <!--&lt;!&ndash;<div id="img02"></div>&ndash;&gt;-->
+        <!--<div class="texto-slide">"Diseño es donde <span>la ciencia y el arte</span> <br/> llegan a un punto de equilibrio"</div>-->
+        <!--<div id="button02">Portfolio</div>-->
+        <!--</div>-->
+
+        <!--<div class="slide" id="img03" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"-->
+        <!--ng-show="mainViewCtrl.slide03">-->
+        <!--&lt;!&ndash;<div id="img02"></div>&ndash;&gt;-->
+        <!--<div class="texto-slide">"El diseño es la <span>aplicación</span> del intento, <br/> lo contrario del <span>evento</span> fortuito,-->
+        <!--<br/> y un <span>antídoto</span> para el accidente"</div>-->
+        <!--<div id="button03">Portfolio</div>-->
+        <!--</div>-->
+
+        <!--<div class="slide" id="img04" style="height: {{mainViewCtrl.homeHeight}}; width:{{mainViewCtrl.homeWidth}};"-->
+        <!--ng-show="mainViewCtrl.slide04">-->
+        <!--&lt;!&ndash;<div id="img02"></div>&ndash;&gt;-->
+        <!--<div class="texto-slide">"El diseño es inteligencia <br/><span>hecha visible</span>"</div>-->
+        <!--<div id="button04">Portfolio</div>-->
+        <!--</div>-->
 
 
         <!--<div id="output"></div>-->
@@ -40,78 +72,125 @@
         </div>
         <div class="btn-frase" ng-click="mainCtrl.goToAnchor('contacto')">Contacto</div>
     </div>
-    <div id="empresa">
-        <div id="empresa-titulo"><img src="./img/rueda.png" alt=""/>Staff</div>
-        <!--<img src="./img/empresa.jpg" alt=""/>-->
+    <div id="empresa" style="display: flex;flex-direction: column;">
+        <div>
+            <!--<div id="empresa-titulo"><img src="./img/rueda.png" alt=""/>Staff</div>-->
+            <div id="empresa-titulo">Staff</div>
+            <br/>
+            <!--<img src="./img/empresa.jpg" alt=""/>-->
 
 
-        <!--<div>-->
-        <ul id="sdt_menu" class="sdt_menu">
-            <li>
-                <a href="">
-                    <img src="img/2.png" alt=""/>
-                    <span class="sdt_active"></span>
+            <!--<div>-->
+            <ul id="sdt_menu" class="sdt_menu">
+                <li>
+                    <a href="">
+                        <img src="img/2.png" alt=""/>
+                        <span class="sdt_active"></span>
 			<span class="sdt_wrap">
 				<span class="sdt_link">Ventas</span>
 				<span class="sdt_descr"><span class="sdt_descr_firt">Juan Pablo</span> Dilello</span>
 			</span>
-                </a>
+                    </a>
 
-                <div class="sdt_box">
-                    <a href="">Manager</a>
-                    <a href="">Ventas</a>
-                    <a href="">Relaciones Comerciales</a>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <img src="img/1.png" alt=""/>
-                    <span class="sdt_active"></span>
+                    <div class="sdt_box">
+                        <a href="">Manager</a>
+                        <a href="">Ventas</a>
+                        <a href="">Relaciones Comerciales</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/1.png" alt=""/>
+                        <span class="sdt_active"></span>
 			<span class="sdt_wrap">
 				<span class="sdt_link">Diseño</span>
 				<span class="sdt_descr"><span class="sdt_descr_firt">Diego</span> Yankelevich</span>
 			</span>
-                </a>
+                    </a>
 
-                <div class="sdt_box">
-                    <a href="">Illustrator</a>
-                    <a href="">UI Design</a>
-                    <a href="">Dirección Artística</a>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <img src="img/1.jpg" alt=""/>
-                    <span class="sdt_active"></span>
+                    <div class="sdt_box">
+                        <a href="">Illustrator</a>
+                        <a href="">UI Design</a>
+                        <a href="">Dirección Artística</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/1.jpg" alt=""/>
+                        <span class="sdt_active"></span>
 			<span class="sdt_wrap">
 				<span class="sdt_link">Desarrollo</span>
 				<span class="sdt_descr"><span class="sdt_descr_firt">Ariel</span> Cessario</span>
 			</span>
-                </a>
+                    </a>
 
-                <div class="sdt_box">
-                    <a href="">Desarrollo</a>
-                    <a href="">Arquitectura</a>
-                    <a href="">Project Manager</a>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <img src="img/3.png" alt=""/>
-                    <span class="sdt_active"></span>
+                    <div class="sdt_box">
+                        <a href="">Desarrollo</a>
+                        <a href="">Arquitectura</a>
+                        <a href="">Project Manager</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/3.png" alt=""/>
+                        <span class="sdt_active"></span>
 			<span class="sdt_wrap">
-				<span class="sdt_link">Consultoria</span>
-				<span class="sdt_descr"><span class="sdt_descr_firt">Javier</span> Zaine</span>
+				<span class="sdt_link">Desarrollo</span>
+				<span class="sdt_descr"><span class="sdt_descr_firt">Mateo</span> Maneff</span>
 			</span>
-                </a>
+                    </a>
 
-                <div class="sdt_box">
-                    <a href="">Ventas</a>
-                    <a href="">Asistencia Post Venta</a>
-                    <a href="">Consultoria</a>
-                </div>
-            </li>
-        </ul>
+                    <div class="sdt_box">
+                        <a href="">Desarrollo</a>
+                        <a href="">Arquitectura</a>
+                        <a href="">Investigación</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div style="font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        max-width: 60%;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 25px;
+        color:#ffffff;
+        text-align: center">
+            <br/>
+            <br/>
+            Nuestro equipo se compone de cuatro profesionales:
+            <br/>
+            <br/>
+            Juan, el encargado de ventas y post venta, siempre dispuesto a contestar preguntas no importa el medio de
+            comunicación. Empleado por mas de diez años en el sector privado, decidió juntar toda su experiencia en el
+            trato a grandes empresas y aplicarla a clientes de cualquier tamaño y necesidad.
+            <br/>
+            <br/>
+
+
+            Diego, la creatividad en la empresa, sus ideas dan vida a las páginas y hacen que pasen de ser texto y
+            colores a una experiencia única para cada cliente. Su experiencia abarca publicidad gráfica y diseño
+            multimeda,
+            pasando por portales y sitios web, o videos institucionales para empresas. No importa la página, todas serán
+            experiencias asombrosas y de máxima calidad.
+            <br/>
+            <br/>
+
+            Mateo, nuestro representante en el interior del país, se ocupa del desarrollo y la arquitectura de nuestras
+            aplicaciones. Ingeniero en sistemas y con muchísima experiencia en varias tecnologías, hace de nuestras páginas
+            una herramienta confiable y estable. Siempre con buen humor, y dos hijos hermosos, responderá cualquier
+            consulta técnica que se le pueda hacer.
+            <br/>
+            <br/>
+
+            Por último Ariel que junto a Mateo se ocupan del desarrollo, implementación e investigación de nuevas
+            tecnologías que les permiten a nuestros clientes siempre estar a la vanguardia en páginas web. Con mas de 14
+            años de relación con el sector de sistemas hace siempre lo necesario para que las páginas sean rápidas,
+            ágiles y seguras.
+            <br/>
+            <br/>
+
+        </div>
 
 
         <!--</div>-->
@@ -131,54 +210,77 @@
         <div id="portfolio-detalle">
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port01.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port01b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port01.png" height="150" width="150" alt="Diseño Responsivo"/>
+                    <img class="back" src="./img/port01b.png" height="150" width="150" alt="Sistemas Web"/>
                     <!--<div class="front" style="background:  url('./img/port01.png') center center no-repeat;"></div>-->
                     <!--<div class="back" style="background:  url('./img/port01b.png') center center no-repeat;"></div>-->
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port02.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port02b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port02.png" height="150" width="150" alt="Diseño y posicionamiento web"/>
+                    <img class="back" src="./img/port02b.png" height="150" width="150" alt="Campañas de Adwords"/>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port03.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port03b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port03.png" height="150" width="150" alt="ecommerce"/>
+                    <img class="back" src="./img/port03b.png" height="150" width="150" alt="sistemas de gestion web"/>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port04.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port04b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port04.png" height="150" width="150" alt="sistemas de gestion"/>
+                    <img class="back" src="./img/port04b.png" height="150" width="150" alt="sistemas de gestion"/>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port05.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port05b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port05.png" height="150" width="150" alt="apps para celulares"/>
+                    <img class="back" src="./img/port05b.png" height="150" width="150" alt="desarrollos móbiles"/>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port06.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port06b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port06.png" height="150" width="150" alt="posicionamiento web"/>
+                    <img class="back" src="./img/port06b.png" height="150" width="150" alt="posicionamiento web"/>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port07.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port07b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port07.png" height="150" width="150" alt="google analytics"/>
+                    <img class="back" src="./img/port07b.png" height="150" width="150" alt="google analytics"/>
                 </div>
             </div>
             <div class="proyecto">
                 <div class="flipper">
-                    <img class="front" src="./img/port08.png" height="150" width="150" alt=""/>
-                    <img class="back" src="./img/port08b.png" height="150" width="150" alt=""/>
+                    <img class="front" src="./img/port08.png" height="150" width="150" alt="hosting"/>
+                    <img class="back" src="./img/port08b.png" height="150" width="150" alt="hosting"/>
                 </div>
             </div>
+
+        </div>
+
+        <div style="font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        max-width: 60%;
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 25px;
+        color:#ffffff;
+        text-align: center">
+            <br/>
+            <br/>
+            Nuestra misión es crecer junto a nuestros clientes, hacer de la tecnología una herramienta útil y no un
+            dolor de cabeza diario. Sabemos que en los tiempos que corren, estar al tanto de los últimos avances en
+            informática es muy difícil, por esa razón nosotros queremos conocer a nuestros clientes y sus negocios, para
+            poder brindarles siempre las tecnologías que mejor se adapten a sus necesidades.
+            <br/>
+            <br/>
+            No duden en preguntarnos lo que quieran o solo tener un charla sobre los nuevos avances o recomendaciones
+            sobre nuevos productos.
+            <br/>
+            <br/>
 
         </div>
 
@@ -267,9 +369,16 @@
         line-height: 25px;
         color:#ffffff;
         text-align: center">
-            Somos una empresa joven y dinámica, donde nuestra fuerza de trabajo, proactividad e ideas obedecen a estas mismas cualidades, además de estar pensadas y apuntadas a un gran espectro de consumidores en la web, sin desviar el foco de lo que específicamente necesita su empresa o emprendimiento como estrategia de posicionamiento.
+            Somos una empresa joven y dinámica, donde nuestra fuerza de trabajo, proactividad e ideas obedecen a estas
+            mismas cualidades, además de estar pensadas y apuntadas a un gran espectro de consumidores en la web, sin
+            desviar el foco de lo que específicamente necesita su empresa o emprendimiento como estrategia de
+            posicionamiento.
             <br/><br/>
-            Contamos con basta experiencia en el rubro, trabajando como agentes internos o externos de distintas empresas realizando y programando aplicaciones para celulares con sistema operativo android, diseño web, marketing, publicidad on line y posicionamiento en motores de búsqueda en internet.
+            Contamos con basta experiencia en el rubro, trabajando como agentes internos o externos de distintas
+            empresas realizando y programando aplicaciones para celulares con sistema operativo android, diseño web,
+            marketing, publicidad on line y posicionamiento en motores de búsqueda en internet.
+            <br/><br/>
+            Solicite su presupuesto sin cargo a través de nuestro formulario de contacto.
         </div>
     </div>
     <div id="contacto">
@@ -307,7 +416,7 @@
             <span>ventas@ac-desarrollos.com</span>
         </div>
         <div>Teléfono <br/>
-            <span>0113-459-5006</span>
+            <span>0113-111-5006</span>
         </div>
         <div class="footer-logo">
             <div>AC-desarrollos</div>
@@ -321,6 +430,10 @@
         <div>Web <br/>
             <span>www.ac-desarrollos.com</span>
         </div>
+    </div>
+    <div id="copyrights">
+        &copy; 2015 - www.ac-desarrollos.com - AC Desarrollos - 113111-5006 - ventas@ac-desarrollos.com - All Rights
+        Reserved
     </div>
 
 </div>

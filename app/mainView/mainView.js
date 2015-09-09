@@ -4,9 +4,9 @@
     'use strict';
 
     angular.module('ac.mainView', [
-        'ngRoute'])
+        'ngRoute', 'ac'])
         .config(['$routeProvider', function ($routeProvider) {
-            $routeProvider.when('/', {
+            $routeProvider.when('/:id', {
                 templateUrl: './mainView/mainView.html',
                 controller: 'MainViewCtrl'
             });
@@ -14,18 +14,23 @@
         .controller('MainViewCtrl', MainViewCtrl)
         ;
 
-    MainViewCtrl.$inject = ['$http', '$location', '$interval', '$timeout', '$window', '$scope'];
+    MainViewCtrl.$inject = ['$http', '$location', '$interval', '$timeout', '$window', '$scope', '$routeParams', 'WebNav'];
 
-    function MainViewCtrl($http, $location, $interval, $timeout, $window, $scope) {
+    function MainViewCtrl($http, $location, $interval, $timeout, $window, $scope, $routeParams, WebNav) {
 
         var vm = this;
 
+        vm.id = $routeParams.id;
         vm.slide01 = true;
         $interval(callAtTimeout, 5000);
         vm.sendMail = sendMail;
         vm.enviado = false;
         vm.homeWidth = $window.innerWidth + 'px';
+        //vm.homeHeight = ($window.innerWidth / 1.95) + 'px';
         vm.homeHeight = ($window.innerWidth / 1.95) + 'px';
+
+
+
 
         empresa();
 
@@ -36,12 +41,12 @@
             for(var i = 0; i<textosSlide.length; i++){
 
                 var textoSlideHeight = textosSlide[i].style.height;
-                console.log((textoSlideHeight / 2));
+                //console.log((textoSlideHeight / 2));
                 textosSlide[i].style.top = ((parseFloat(vm.homeHeight) / 2) - (parseFloat(vm.homeHeight)/10))  + 'px';
             }
         }
 
-
+        WebNav.goToAnchor(vm.id);
 
         //var stylesheet = document.querySelector("link[href='stylesheets/screen.css']").sheet;
         //var rules = stylesheet.rules;
@@ -184,12 +189,12 @@
 
         function sendMail() {
 
-            //console.log(vm.nombre);
+            //console.log(vm.mail);
             return $http.post('./contact.php',
                 {'email': vm.email, 'nombre': vm.nombre, 'mensaje': vm.mensaje, 'asunto': vm.asunto})
                 .success(
                 function (data) {
-                    //console.log(data);
+                    console.log(data);
                     vm.enviado = true;
                     $timeout(hideMessage, 3000);
                     function hideMessage(){
@@ -200,6 +205,8 @@
                     vm.nombre = '';
                     vm.mensaje = '';
                     vm.asunto = '';
+
+                    goog_report_conversion('http://www.ac-desarrollos.com/#');
                 })
                 .error(function (data) {
                     console.log(data);

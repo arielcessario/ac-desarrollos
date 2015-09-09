@@ -7,9 +7,13 @@
   "private": true,
   "dependencies": {
     "angular": "1.2.x",
-    "angular-route": "1.2.x",
+    "angular-animate": "~1.4.5",
+    "angular-aria": "~1.4.5",
     "angular-loader": "1.2.x",
     "angular-mocks": "~1.2.x",
+    "angular-route": "1.2.x",
+    "angular-scroll": "~0.7.2",
+    "angular-touch": "~1.4.5",
     "html5-boilerplate": "~4.3.0"
   }
 }

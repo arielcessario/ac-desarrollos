@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
-/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -87,6 +87,76 @@ html {
 }
 
 /* line 25, ../sass/screen.scss */
+.ac-chat {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: white;
+  position: fixed;
+  height: 300px;
+  width: 350px;
+  z-index: 300;
+  right: 20px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #039FB2;
+  box-shadow: 0px 0px 20px 2px black;
+}
+/* line 43, ../sass/screen.scss */
+.ac-chat span {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+/* line 47, ../sass/screen.scss */
+.ac-chat input {
+  width: 340px;
+  margin-left: 5px;
+  margin-top: 10px;
+  border: 1px solid #039FB2;
+  margin-bottom: 10px;
+}
+/* line 56, ../sass/screen.scss */
+.ac-chat #chat-second {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100%;
+}
+/* line 64, ../sass/screen.scss */
+.ac-chat #mensajes {
+  height: 280px;
+  width: 330px;
+  overflow-y: auto;
+  margin: 10px;
+}
+/* line 71, ../sass/screen.scss */
+.ac-chat #texto-mensaje {
+  margin-bottom: 10px;
+}
+/* line 75, ../sass/screen.scss */
+.ac-chat button {
+  border: 1px solid white;
+  background: #039FB2;
+  color: #ffffff;
+  font-size: 20px;
+  transition: all .4s;
+  cursor: pointer;
+  height: 50px;
+  width: 340px;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+/* line 89, ../sass/screen.scss */
+.ac-chat button:hover {
+  border: 1px solid #039FB2;
+  background: #ffffff;
+  color: #039FB2;
+}
+
+/* line 98, ../sass/screen.scss */
 #nav-mob {
   z-index: 20;
   position: fixed;
@@ -103,31 +173,31 @@ html {
   flex-direction: row;
 }
 @media (min-width: 601px) {
-  /* line 25, ../sass/screen.scss */
+  /* line 98, ../sass/screen.scss */
   #nav-mob {
     display: none;
   }
 }
-/* line 43, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 #nav-mob div:nth-child(2) {
   flex: 1;
 }
-/* line 47, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 #nav-mob img {
   max-width: 40px;
   max-height: 40px;
   margin-right: 10px;
   margin-top: 5px;
 }
-/* line 54, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 #nav-mob img:focus {
   outline: none;
 }
-/* line 58, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 #nav-mob #menu-mobile {
   transition: all 0.5s;
 }
-/* line 62, ../sass/screen.scss */
+/* line 135, ../sass/screen.scss */
 #nav-mob #menu-mobile .menu-item-mob {
   font-family: "Roboto", sans-serif;
   color: #ffffff;
@@ -137,7 +207,7 @@ html {
   margin: 5px;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .menu-mob-open {
   z-index: 15;
   transition: menu .5s;
@@ -147,7 +217,7 @@ html {
   right: 0px;
   background: #000000;
 }
-/* line 85, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .menu-mob-open .menu-item-mob {
   font-size: 20px !important;
 }
@@ -163,7 +233,7 @@ html {
     transform: scale(1, 1) !important;
   }
 }
-/* line 112, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 #nav-bar {
   z-index: 20;
   position: fixed;
@@ -181,19 +251,19 @@ html {
   justify-content: center;
 }
 @media (max-width: 600px) {
-  /* line 112, ../sass/screen.scss */
+  /* line 185, ../sass/screen.scss */
   #nav-bar {
     display: none;
   }
 }
-/* line 133, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 #nav-bar #menu-container {
   max-width: 800px;
   transition: all .5s;
   margin-top: 90px;
   height: 100px;
 }
-/* line 139, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 #nav-bar #menu-container .menu-item {
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -203,90 +273,90 @@ html {
   cursor: pointer;
   margin: 20px;
 }
-/* line 151, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 #nav-bar #menu-container .menu-middle img {
   margin-bottom: -30px;
 }
-/* line 156, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 #nav-bar #menu-container .menu-item:hover {
   color: #039FB2;
 }
-/* line 160, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 #nav-bar #menu-container .menu-item:focus {
   outline: none;
 }
-/* line 164, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 #nav-bar img {
   max-width: 50px;
   max-height: 50px;
   transition: all .5s;
 }
-/* line 169, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 #nav-bar img:focus {
   outline: none;
 }
 
-/* line 175, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 .menu-home-mini {
   margin-top: 40px !important;
 }
 
-/* line 180, ../sass/screen.scss */
+/* line 253, ../sass/screen.scss */
 .logo-mini {
   margin-top: 0px !important;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .menu-mini {
   margin-top: 40px !important;
 }
 
-/* line 191, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .nav-bar-mini {
   height: 50px !important;
 }
 
-/* line 200, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 .slide {
   transition: all 0.5s;
 }
 
-/* line 208, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 .slide.ng-add {
   z-index: 1;
   opacity: 1;
 }
 
-/* line 216, ../sass/screen.scss */
+/* line 289, ../sass/screen.scss */
 .slide.ng-hide {
   z-index: 0;
   transform: scale(10, 10);
   opacity: 0;
 }
 
-/* line 223, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 #home {
   overflow: hidden;
   z-index: 3 !important;
   position: relative;
 }
-/* line 249, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 #home #img01 {
   background: url("../img/background01.jpg") center center no-repeat;
 }
-/* line 253, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 #home #img02 {
   background: url("../img/background02.jpg") center center no-repeat;
 }
-/* line 256, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 #home #img03 {
   background: url("../img/background01.jpg") center center no-repeat;
 }
-/* line 259, ../sass/screen.scss */
+/* line 332, ../sass/screen.scss */
 #home #img04 {
   background: url("../img/background02.jpg") center center no-repeat;
 }
-/* line 263, ../sass/screen.scss */
+/* line 336, ../sass/screen.scss */
 #home #img01, #home #img02, #home #img03, #home #img04 {
   overflow: hidden;
   position: absolute;
@@ -296,7 +366,7 @@ html {
   transition: all 0.5s;
 }
 
-/* line 347, ../sass/screen.scss */
+/* line 420, ../sass/screen.scss */
 #frase-02, #frase-01, #frase-03 {
   z-index: 10;
   width: 100%;
@@ -310,7 +380,7 @@ html {
   color: #039FB2;
   font-weight: 300;
 }
-/* line 363, ../sass/screen.scss */
+/* line 436, ../sass/screen.scss */
 #frase-02 .texto-frase, #frase-01 .texto-frase, #frase-03 .texto-frase {
   font-family: Roboto, serif;
   font-weight: 100;
@@ -319,22 +389,22 @@ html {
   margin: 30px;
 }
 @media (max-width: 400px) {
-  /* line 363, ../sass/screen.scss */
+  /* line 436, ../sass/screen.scss */
   #frase-02 .texto-frase, #frase-01 .texto-frase, #frase-03 .texto-frase {
     font-size: 30px;
   }
 }
 @media (min-width: 401px) {
-  /* line 363, ../sass/screen.scss */
+  /* line 436, ../sass/screen.scss */
   #frase-02 .texto-frase, #frase-01 .texto-frase, #frase-03 .texto-frase {
     font-size: 40px;
   }
 }
-/* line 376, ../sass/screen.scss */
+/* line 449, ../sass/screen.scss */
 #frase-02 .texto-frase span, #frase-01 .texto-frase span, #frase-03 .texto-frase span {
   font-weight: 400;
 }
-/* line 380, ../sass/screen.scss */
+/* line 453, ../sass/screen.scss */
 #frase-02 .btn-frase, #frase-01 .btn-frase, #frase-03 .btn-frase {
   border: 1px solid #039FB2;
   background: #039FB2;
@@ -346,14 +416,14 @@ html {
   height: 24px;
   width: 80px;
 }
-/* line 392, ../sass/screen.scss */
+/* line 465, ../sass/screen.scss */
 #frase-02 .btn-frase:hover, #frase-01 .btn-frase:hover, #frase-03 .btn-frase:hover {
   border: 1px solid #039FB2;
   background: #ffffff;
   color: #039FB2;
 }
 
-/* line 400, ../sass/screen.scss */
+/* line 473, ../sass/screen.scss */
 .screen-shadow {
   position: fixed;
   top: 0;
@@ -364,7 +434,7 @@ html {
   z-index: 14;
 }
 
-/* line 410, ../sass/screen.scss */
+/* line 483, ../sass/screen.scss */
 .btn-close {
   font-size: 2em;
   color: white;
@@ -374,13 +444,13 @@ html {
   z-index: 16;
 }
 
-/* line 420, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 .btn-hidden {
   font-size: 0px;
   transition: all 1s;
 }
 
-/* line 425, ../sass/screen.scss */
+/* line 498, ../sass/screen.scss */
 .texto-slide {
   width: 100%;
   position: absolute;
@@ -395,25 +465,25 @@ html {
   top: 180px;
   max-height: 200px;
 }
-/* line 438, ../sass/screen.scss */
+/* line 511, ../sass/screen.scss */
 .texto-slide span {
   color: #039FB2;
   font-weight: 100;
 }
 @media (max-width: 600px) {
-  /* line 425, ../sass/screen.scss */
+  /* line 498, ../sass/screen.scss */
   .texto-slide {
     font-size: 20px;
   }
 }
 @media (min-width: 601px) and (max-width: 800px) {
-  /* line 425, ../sass/screen.scss */
+  /* line 498, ../sass/screen.scss */
   .texto-slide {
     font-size: 25px;
   }
 }
 @media (min-width: 801px) {
-  /* line 425, ../sass/screen.scss */
+  /* line 498, ../sass/screen.scss */
   .texto-slide {
     font-size: 50px;
   }

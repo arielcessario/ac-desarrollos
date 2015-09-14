@@ -14,9 +14,9 @@
         .controller('MainViewCtrl', MainViewCtrl)
         ;
 
-    MainViewCtrl.$inject = ['$http', '$location', '$interval', '$timeout', '$window', '$scope', '$routeParams', 'WebNav'];
+    MainViewCtrl.$inject = ['$http', '$location', '$interval', '$timeout', '$window', '$scope', '$routeParams'];
 
-    function MainViewCtrl($http, $location, $interval, $timeout, $window, $scope, $routeParams, WebNav) {
+    function MainViewCtrl($http, $location, $interval, $timeout, $window, $scope, $routeParams) {
 
         var vm = this;
 
@@ -46,7 +46,7 @@
             }
         }
 
-        WebNav.goToAnchor(vm.id);
+        //WebNav.goToAnchor(vm.id);
 
         //var stylesheet = document.querySelector("link[href='stylesheets/screen.css']").sheet;
         //var rules = stylesheet.rules;

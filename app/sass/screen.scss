@@ -22,6 +22,79 @@ html {
 
 }
 
+.ac-chat{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color:white;
+  position: fixed;
+  height: 300px;
+  width: 350px;
+  z-index: 300;
+  right: 20px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #039FB2;
+  box-shadow: 0px 0px 20px 2px black;
+
+  span{
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  input{
+    width: 340px;
+    margin-left: 5px;
+    margin-top: 10px;
+    border: 1px solid #039FB2;
+
+    margin-bottom: 10px;
+  }
+
+  #chat-second{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100%;
+
+  }
+  #mensajes{
+    height: 280px;
+    width: 330px;
+    overflow-y: auto;
+    margin: 10px;
+  }
+
+  #texto-mensaje{
+    margin-bottom: 10px;
+  }
+
+  button {
+    border: 1px solid white;
+    background: #039FB2;
+    color: #ffffff;
+
+    font-size: 20px;
+    transition: all .4s;
+    cursor: pointer;
+    height: 50px;
+    width: 340px;
+    margin-left: 5px;
+    margin-top: 15px;
+  }
+
+  button:hover {
+    border: 1px solid #039FB2;
+    background: #ffffff;
+    color: #039FB2;
+  }
+}
+
+
+
 #nav-mob {
   @media (min-width: 601px) {
     display: none;

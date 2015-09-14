@@ -51,6 +51,8 @@ function MainController($scope, $location, $document, AcUtilsService) {
             }
 
             myDataRef.push({id: vm.idChat, name: vm.userChat, mail: vm.mailChat, message: vm.messageChat});
+
+            vm.messageChat = '';
         }
 
     }

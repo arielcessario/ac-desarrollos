@@ -40,6 +40,10 @@ html {
   background-color: #039FB2;
   box-shadow: 0px 0px 20px 2px black;
 
+  @media(max-width: 370px){
+    right: 0px;
+  }
+
   span{
     margin-top: 10px;
     margin-left: 5px;

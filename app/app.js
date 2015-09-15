@@ -19,8 +19,8 @@ angular.module('ac', [
     .controller('MainController', MainController);
 
 
-MainController.$inject = ['$scope', '$location', '$document', 'AcUtilsService'];
-function MainController($scope, $location, $document, AcUtilsService) {
+MainController.$inject = ['$scope', '$location', '$document', 'AcUtilsService', '$http'];
+function MainController($scope, $location, $document, AcUtilsService, $http) {
     var vm = this;
 
     vm.openMenu = openMenu;

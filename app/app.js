@@ -57,6 +57,8 @@ function MainController($scope, $location, $document, AcUtilsService) {
 
     }
 
+
+
     myDataRef.on('child_added', function (snapshot) {
 
         if(snapshot.val().id != vm.idChat){
@@ -86,7 +88,7 @@ function MainController($scope, $location, $document, AcUtilsService) {
         }
 
         vm.idChat = Math.floor((Math.random() * 1000) + 1);
-
+        sendMail( vm.mailChat, vm.userChat);
         myDataRef.push({id: vm.idChat, name: vm.userChat, mail: vm.mailChat, message: vm.userChat + ' se ha conectado'});
         vm.chatIsLogged = true;
 
@@ -105,6 +107,32 @@ function MainController($scope, $location, $document, AcUtilsService) {
         var someElement = angular.element(document.getElementById(id));
         $document.scrollToElement(someElement, offset, duration);
 
+    }
+
+    function sendMail(email, nombre) {
+
+        //console.log(vm.mail);
+        return $http.post('contact.php',
+            {'email': email, 'nombre': nombre, 'mensaje': 'http://192.185.67.199/~arielces/ac-desarrollos-chat/', 'asunto': 'Nuevo chat de cliente'})
+            .success(
+            function (data) {
+                console.log(data);
+                //vm.enviado = true;
+                //$timeout(hideMessage, 3000);
+                //function hideMessage(){
+                //    vm.enviado = false;
+                //}
+
+                vm.email = '';
+                vm.nombre = '';
+                vm.mensaje = '';
+                vm.asunto = '';
+
+                //goog_report_conversion('http://www.ac-desarrollos.com/#');
+            })
+            .error(function (data) {
+                console.log(data);
+            });
     }
 
 }

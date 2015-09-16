@@ -8,11 +8,14 @@ angular.module('ac', [
     'ngAria',
     'duScroll',
     'acUtils',
+    'ac.noticias',
     'ac.mainView',
-    'ac.cajaPortDir'
+    'ac.cajaPortDir',
+    'acDesarrollos.noticias'
 ]).
     config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.otherwise({redirectTo: '/mainView'});
+        //$routeProvider.otherwise({redirectTo: '/mainView'});
+
     }])
     .directive('scroll', scroll)
     .directive('scrollff', scrollff)
@@ -31,11 +34,23 @@ function MainController($scope, $location, $document, AcUtilsService, $http) {
     vm.chatIsLogged = false;
     vm.ingresarChat = ingresarChat;
     vm.enviarChat = enviarChat;
+    vm.goToNoticias = goToNoticias;
+    vm.goToHome = goToHome;
     vm.userChat = '';
     vm.mailChat = '';
     vm.messageChat = '';
     vm.idChat = 0;
     var myDataRef = new Firebase('https://chat-acdesarrollos.firebaseio.com/');
+
+
+    $location.path('/mainView');
+    function goToNoticias(){
+        $location.path('/noticias');
+    }
+
+    function goToHome(){
+        $location.path('/mainView');
+    }
 
     function enviarChat(event) {
 

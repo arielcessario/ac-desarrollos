@@ -16,28 +16,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <META NAME="KEYWORDS"
           CONTENT="desarrollo de páginas web,websites,adwords,analytics,sistemas web,webgl,responsivo,ecommerce,comercio electronico,venta online">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-    <link rel="stylesheet" href="stylesheets/screen.css">
-    <link rel="stylesheet" href="stylesheets/portfolio.css">
-    <link rel="stylesheet" href="stylesheets/footer.css">
-    <link rel="stylesheet" href="stylesheets/empresa.css">
-    <link rel="stylesheet" href="stylesheets/contacto.css">
-    <link rel="stylesheet" href="stylesheets/clientes.css">
-    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
-
-
+    <link rel="stylesheet" href="stylesheets/acd.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
 </head>
 <body scroll ng-controller="MainController as mainCtrl" is-scrolled="{{mainCtrl.isScrolled}}">
 
 
 <div id="nav-bar" ng-class="{'nav-bar-mini':moved}">
+    <div id="nav-mensaje" ng-class="{'nav-mensaje-moved':moved}">Bienvenido a AC Desarrollos, nuestra misión es tu
+        satisfacción
+    </div>
     <div id="menu-container" ng-class="{'menu-mini':moved}">
+        <div class="menu-item" ng-click="mainCtrl.goToNoticias()">Noticias</div>
         <div class="menu-item" ng-click="mainCtrl.goToAnchor('empresa')">Staff</div>
-        <div class="menu-item" ng-click="mainCtrl.goToAnchor('portfolio')">Servicios</div>
+        <div class="menu-item" ng-click="mainCtrl.goToAnchor('servicios')">Servicios</div>
         <div class="menu-item menu-middle">
             <!--<span ng-class="{'menu-home-mini':moved}" class="menu-home">Home</span>-->
-            <img ng-click="mainCtrl.goToAnchor('home')"
+            <img ng-click="mainCtrl.goToHome();mainCtrl.goToAnchor('home')"
                  ng-class="{'logo-mini':moved}" src="./img/rueda.png" alt=""/>
         </div>
         <div class="menu-item" ng-click="mainCtrl.goToAnchor('clientes')">Clientes</div>
@@ -49,50 +44,35 @@
 </div>
 
 <div id="nav-mob">
-    <div class="menu-hamb-mob">
-        <!--<span ng-class="{'menu-home-mini':moved}" class="menu-home">Home</span>-->
-        <img ng-click="mainCtrl.open = !mainCtrl.open;"
-             src="./img/menu.svg" height="40px" width="40px" alt=""/>
-
-        <div id="menu-mobile" ng-class="{'menu-mob-open': mainCtrl.open }">
-            <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('empresa')">Staff</div>
-            <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('portfolio')">Servicios</div>
-            <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('clientes')">Clientes</div>
-            <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('contacto')">Contacto</div>
-            <div class="menu-item-mob" ng-click="mainCtrl.chatOpen = !mainCtrl.chatOpen">Chat</div>
-
-        </div>
-    </div>
-
-    <div>
-
-    </div>
-
     <div class="menu-logo-mob">
-        <!--<span ng-class="{'menu-home-mini':moved}" class="menu-home">Home</span>-->
-        <img ng-click="mainCtrl.goToAnchor('home')" src="./img/rueda.png" alt=""/>
+        <img ng-click="mainCtrl.open = !mainCtrl.open;"
+             ng-class="{'menu-mob-closed': !mainCtrl.open, 'menu-mob-icon-open': mainCtrl.open}"
+             src="./img/rueda.png" alt=""/>
+    </div>
+
+    <div id="menu-mob-titulo">
+        Bienvenido a AC Desarrollos
     </div>
 
 </div>
 
-<!--<div class="content"><span>isScrolled {{mini}}</span></div>-->
-
-<!--&lt;!&ndash;[if lt IE 7]>-->
-<!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
-<!--<![endif]&ndash;&gt;-->
-<!--<div class="header-fix"></div>-->
-<div class="view-container" id="container">
-    <!--<div id="output">-->
-
-    <div id="view" class="view" ng-view>
-
-    </div>
-    <!--</div>-->
+<div id="menu-mobile" ng-if="mainCtrl.open" ng-cloak>
+    <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('home'); mainCtrl.open = false;">Inicio</div>
+    <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('empresa'); mainCtrl.open = false;">Staff</div>
+    <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('servicios'); mainCtrl.open = false;">Servicios</div>
+    <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('clientes'); mainCtrl.open = false;">Clientes</div>
+    <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('contacto'); mainCtrl.open = false;">Contacto</div>
+    <div class="menu-item-mob" ng-click="mainCtrl.chatOpen = !mainCtrl.chatOpen; mainCtrl.open = false;">Chat</div>
 
 </div>
 
 
-<div class="ac-chat" ng-if="mainCtrl.chatOpen;">
+<div id="view" class="view-container" ng-view>
+
+</div>
+
+
+<div class="ac-chat" ng-if="mainCtrl.chatOpen;" ng-cloak>
     <div id="chat-first" ng-if="!mainCtrl.chatIsLogged">
         <span>Nombre</span>
         <input type="text" id="chat-nombre" ng-model="mainCtrl.userChat"/>
@@ -102,7 +82,8 @@
     </div>
     <div id="chat-second" ng-if="mainCtrl.chatIsLogged">
         <div id="mensajes"></div>
-        <input id="texto-mensaje" ng-model="mainCtrl.messageChat" ng-keypress="mainCtrl.enviarChat($event);" type="text">
+        <input id="texto-mensaje" ng-model="mainCtrl.messageChat" ng-keypress="mainCtrl.enviarChat($event);"
+               type="text">
     </div>
 
 </div>
@@ -120,14 +101,14 @@
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-touch/angular-touch.min.js"></script>
 <script src="bower_components/angular-scroll/angular-scroll.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="jquery.easing.1.3.js"></script>
+<script src="bower_components/ac-angular-noticias/ac-noticias.js"></script>
 <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 <!--<script src="ext/scroll.js"></script>-->
 <script src="app.js"></script>
 <script src="utils.js"></script>
 <script src="mainView/mainView.js"></script>
 <script src="mainView/caja-portfolio-directive.js"></script>
+<script src="noticias/noticias.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>

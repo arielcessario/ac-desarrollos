@@ -3,7 +3,7 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,700,400);
-/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,45 +25,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -76,14 +76,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: #039FB2;
 }
-/* line 20, ../sass/clientes.scss */
+/* line 21, ../sass/clientes.scss */
 #clientes img {
   max-width: 100%;
   max-height: 100%;
 }
-/* line 25, ../sass/clientes.scss */
+/* line 26, ../sass/clientes.scss */
 #clientes #clientes-titulo {
   margin-bottom: 50px;
   margin-top: 70px;
@@ -92,7 +93,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #ffffff;
 }
 @media (max-width: 400px) {
-  /* line 25, ../sass/clientes.scss */
+  /* line 26, ../sass/clientes.scss */
   #clientes #clientes-titulo {
     font-size: 80px;
     margin-right: 0px;
@@ -100,46 +101,46 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 @media (min-width: 401px) {
-  /* line 25, ../sass/clientes.scss */
+  /* line 26, ../sass/clientes.scss */
   #clientes #clientes-titulo {
     font-size: 110px;
   }
 }
 @media (max-width: 400px) {
-  /* line 44, ../sass/clientes.scss */
+  /* line 45, ../sass/clientes.scss */
   #clientes #clientes-titulo img {
     height: 0px;
   }
 }
 @media (min-width: 401px) {
-  /* line 44, ../sass/clientes.scss */
+  /* line 45, ../sass/clientes.scss */
   #clientes #clientes-titulo img {
     height: 70px;
   }
 }
 
-/* line 62, ../sass/clientes.scss */
+/* line 63, ../sass/clientes.scss */
 #clientes {
   display: flex;
   flex-direction: column;
 }
-/* line 66, ../sass/clientes.scss */
+/* line 67, ../sass/clientes.scss */
 #clientes .clientes-grid-container {
   margin-bottom: 50px;
 }
 @media (max-width: 400px) {
-  /* line 66, ../sass/clientes.scss */
+  /* line 67, ../sass/clientes.scss */
   #clientes .clientes-grid-container {
     transform: scale(0.7, 0.7) !important;
   }
 }
-/* line 78, ../sass/clientes.scss */
+/* line 79, ../sass/clientes.scss */
 #clientes .clientes-grid-container .clientes-row {
   width: 500px;
   display: flex;
   flex-flow: row;
 }
-/* line 85, ../sass/clientes.scss */
+/* line 86, ../sass/clientes.scss */
 #clientes .clientes-grid-container .cliente {
   width: 150px;
   height: 150px;
@@ -147,16 +148,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 5px;
   background-size: contain;
 }
-/* line 96, ../sass/clientes.scss */
+/* line 97, ../sass/clientes.scss */
 #clientes .clientes-grid-container .cliente:hover .flipper, #clientes .clientes-grid-container .cliente.hover .flipper {
   transform: rotateX(180deg);
 }
-/* line 100, ../sass/clientes.scss */
+/* line 101, ../sass/clientes.scss */
 #clientes .clientes-grid-container .cliente, #clientes .clientes-grid-container .front, #clientes .clientes-grid-container .back {
   width: 150px;
   height: 150px;
 }
-/* line 105, ../sass/clientes.scss */
+/* line 106, ../sass/clientes.scss */
 #clientes .clientes-grid-container .flipper {
   transition: 0.6s;
   transform-style: preserve-3d;
@@ -164,7 +165,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 150px;
   width: 150px;
 }
-/* line 114, ../sass/clientes.scss */
+/* line 115, ../sass/clientes.scss */
 #clientes .clientes-grid-container .front {
   backface-visibility: hidden;
   position: absolute;
@@ -177,7 +178,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   height: 150px;
   width: 150px;
 }
-/* line 127, ../sass/clientes.scss */
+/* line 128, ../sass/clientes.scss */
 #clientes .clientes-grid-container .back {
   backface-visibility: hidden;
   position: absolute;

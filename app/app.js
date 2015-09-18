@@ -22,8 +22,8 @@ angular.module('ac', [
     .controller('MainController', MainController);
 
 
-MainController.$inject = ['$scope', '$location', '$document', 'AcUtilsService', '$http'];
-function MainController($scope, $location, $document, AcUtilsService, $http) {
+MainController.$inject = ['$scope', '$location', '$document', 'AcUtilsService', '$http', '$timeout'];
+function MainController($scope, $location, $document, AcUtilsService, $http, $timeout) {
     var vm = this;
 
     vm.openMenu = openMenu;
@@ -115,12 +115,17 @@ function MainController($scope, $location, $document, AcUtilsService, $http) {
     }
 
     function goToAnchor(id) {
-        var duration = 1000;
-        var offset = 30; //pixels; adjust for floating menu, context etc
-        //Scroll to #some-id with 30 px "padding"
-        //Note: Use this in a directive, not with document.getElementById
-        var someElement = angular.element(document.getElementById(id));
-        $document.scrollToElement(someElement, offset, duration);
+        $location.path('/mainView');
+
+        $timeout(function(){
+            var duration = 1000;
+            var offset = 30; //pixels; adjust for floating menu, context etc
+            //Scroll to #some-id with 30 px "padding"
+            //Note: Use this in a directive, not with document.getElementById
+            var someElement = angular.element(document.getElementById(id));
+            $document.scrollToElement(someElement, offset, duration);
+        },10);
+
 
     }
 

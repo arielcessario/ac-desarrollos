@@ -8,7 +8,9 @@ angular.module('ac', [
     'ngAria',
     'duScroll',
     'acUtils',
+    'ac.noticia',
     'ac.noticias',
+    'ac.listadoNoticias',
     'ac.mainView',
     'ac.cajaPortDir',
     'acDesarrollos.noticias'

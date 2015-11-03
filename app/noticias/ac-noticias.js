@@ -281,7 +281,7 @@
             return $http.get(url + '?function=getNoticias', {cache: false})
                 .success(function (data) {
 
-                    //console.log(data);
+                    console.log(data);
                     for (var i = 0; i < data.length; i++) {
                         var fecha = new Date(data[i].fecha);
 

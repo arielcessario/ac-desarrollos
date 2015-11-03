@@ -57,6 +57,7 @@
 </div>
 
 <div id="menu-mobile" ng-if="mainCtrl.open" ng-cloak>
+    <div class="menu-item-mob" ng-click="mainCtrl.goToNoticias()">Noticias</div>
     <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('home'); mainCtrl.open = false;">Inicio</div>
     <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('empresa'); mainCtrl.open = false;">Staff</div>
     <div class="menu-item-mob" ng-click="mainCtrl.goToAnchor('servicios'); mainCtrl.open = false;">Servicios</div>
@@ -108,7 +109,9 @@
 <script src="utils.js"></script>
 <script src="mainView/mainView.js"></script>
 <script src="mainView/caja-portfolio-directive.js"></script>
+<script src="noticias/noticia.js"></script>
 <script src="noticias/noticias.js"></script>
+<script src="noticias/ac-listado-noticias.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>
